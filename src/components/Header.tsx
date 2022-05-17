@@ -14,26 +14,33 @@ import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOu
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import React from 'react';
 
+const appBar = css`
+	background-color: #fff;
+`;
+
 const searchInput = css`
 	opacity: 0.6;
-	padding: 0px, 1px;
+	padding: 0px
 	font-size: 0.8rem;
+	&:hover {
+		background-color: #f2f2f2;
+	}
 `;
 
 export default function Header() {
 	return (
-		<AppBar position="static">
+		<AppBar position="static" css={appBar}>
 			<Toolbar>
 				<Grid container alignItems="center">
-					<Grid item>
+					<Grid item sm>
 						<InputBase
 							css={searchInput}
-							placeholder="Search topics"
+							placeholder="검색"
 							startAdornment={<SearchOutlinedIcon fontSize="small" />}
 						/>
 					</Grid>
-					<Grid item sm />
-					<Grid item>
+					<Grid item sm={4} />
+					<Grid item sm>
 						<IconButton>
 							<Badge badgeContent={4} color="secondary">
 								<NotificationsNoneIcon fontSize="small" />
