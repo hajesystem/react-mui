@@ -4,63 +4,24 @@ import {
 	Badge,
 	Box,
 	IconButton,
-	InputBase,
-	Menu,
-	MenuItem,
 	Toolbar,
 	Typography,
 } from '@mui/material';
-import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import MailIcon from '@mui/icons-material/Mail';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import AccountMenu from './AccountMenu';
+import MobileMenu from './MobileMenu';
+import ProfileMenu from './ProfileMenu';
+import { Search, SearchIconWrapper, StyledInputBase } from './styled';
 
 type HeaderProps = {
 	drawerWidth: number;
 	onClick: () => void;
 };
-
-const Search = styled('div')(({ theme }) => ({
-	position: 'relative',
-	borderRadius: theme.shape.borderRadius,
-	backgroundColor: alpha(theme.palette.common.white, 0.15),
-	'&:hover': {
-		backgroundColor: alpha(theme.palette.common.white, 0.25),
-	},
-	marginRight: theme.spacing(2),
-	marginLeft: 0,
-	width: '100%',
-	[theme.breakpoints.up('sm')]: {
-		marginLeft: theme.spacing(3),
-		width: 'auto',
-	},
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-	padding: theme.spacing(0, 2),
-	height: '100%',
-	position: 'absolute',
-	pointerEvents: 'none',
-	display: 'flex',
-	alignItems: 'center',
-	justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-	color: 'inherit',
-	'& .MuiInputBase-input': {
-		padding: theme.spacing(1, 1, 1, 0),
-		paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-		transition: theme.transitions.create('width'),
-		width: '100%',
-		[theme.breakpoints.up('md')]: {
-			width: '20ch',
-		},
-	},
-}));
 
 export default function Header({ onClick, drawerWidth }: HeaderProps) {
 	const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -86,82 +47,6 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 	const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
 		setMobileMoreAnchorEl(event.currentTarget);
 	};
-
-	// 데스크탑 메뉴
-	const menuId = 'primary-search-account-menu';
-	const renderMenu = (
-		<Menu
-			anchorEl={anchorEl}
-			anchorOrigin={{
-				vertical: 'top',
-				horizontal: 'right',
-			}}
-			id={menuId}
-			keepMounted
-			transformOrigin={{
-				vertical: 'top',
-				horizontal: 'right',
-			}}
-			open={isMenuOpen}
-			onClose={handleMenuClose}
-		>
-			<MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-			<MenuItem onClick={handleMenuClose}>My account</MenuItem>
-		</Menu>
-	);
-
-	// 모바일 메뉴
-	const mobileMenuId = 'primary-search-account-menu-mobile';
-	const renderMobileMenu = (
-		<Menu
-			anchorEl={mobileMoreAnchorEl}
-			anchorOrigin={{
-				vertical: 'top',
-				horizontal: 'right',
-			}}
-			id={mobileMenuId}
-			keepMounted
-			transformOrigin={{
-				vertical: 'top',
-				horizontal: 'right',
-			}}
-			open={isMobileMenuOpen}
-			onClose={handleMobileMenuClose}
-		>
-			<MenuItem>
-				<IconButton size="large" aria-label="show 4 new mails" color="inherit">
-					<Badge badgeContent={4} color="error">
-						<MailIcon />
-					</Badge>
-				</IconButton>
-				<p>Messages</p>
-			</MenuItem>
-			<MenuItem>
-				<IconButton
-					size="large"
-					aria-label="show 17 new notifications"
-					color="inherit"
-				>
-					<Badge badgeContent={17} color="error">
-						<NotificationsIcon />
-					</Badge>
-				</IconButton>
-				<p>Notifications</p>
-			</MenuItem>
-			<MenuItem onClick={handleProfileMenuOpen}>
-				<IconButton
-					size="large"
-					aria-label="account of current user"
-					aria-controls="primary-search-account-menu"
-					aria-haspopup="true"
-					color="inherit"
-				>
-					<AccountCircle />
-				</IconButton>
-				<p>Profile</p>
-			</MenuItem>
-		</Menu>
-	);
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
@@ -196,7 +81,7 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 							<SearchIcon />
 						</SearchIconWrapper>
 						<StyledInputBase
-							placeholder="Search…"
+							placeholder="검색"
 							inputProps={{ 'aria-label': 'search' }}
 						/>
 					</Search>
@@ -224,7 +109,7 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 							size="large"
 							edge="end"
 							aria-label="account of current user"
-							aria-controls={menuId}
+							aria-controls="primary-search-account-menu"
 							aria-haspopup="true"
 							onClick={handleProfileMenuOpen}
 							color="inherit"
@@ -236,7 +121,7 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 						<IconButton
 							size="large"
 							aria-label="show more"
-							aria-controls={mobileMenuId}
+							aria-controls="primary-search-account-menu-mobile"
 							aria-haspopup="true"
 							onClick={handleMobileMenuOpen}
 							color="inherit"
@@ -246,8 +131,20 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 					</Box>
 				</Toolbar>
 			</AppBar>
-			{renderMobileMenu}
-			{renderMenu}
+			<MobileMenu
+				anchorEl={mobileMoreAnchorEl}
+				menuId="primary-search-account-menu-mobile"
+				isMenuOpen={isMobileMenuOpen}
+				menuClose={handleMobileMenuClose}
+			>
+				<ProfileMenu onClick={handleProfileMenuOpen} />
+			</MobileMenu>
+			<AccountMenu
+				anchorEl={anchorEl}
+				menuId="primary-search-account-menu"
+				isMenuOpen={isMenuOpen}
+				menuClose={handleMenuClose}
+			/>
 		</Box>
 	);
 }

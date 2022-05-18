@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import './App.css';
 import { Box, CssBaseline } from '@mui/material';
 import Header from '../components/Header';
-import SideMenu from '../components/SideMenu';
-import './App.css';
+import Aside from '../components/Aside';
 
 const drawerWidth = 240;
 
@@ -15,7 +15,7 @@ function App() {
 	return (
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
-			<SideMenu
+			<Aside
 				onClick={handleDrawerToggle}
 				mobileOpen={mobileOpen}
 				drawerWidth={drawerWidth}
