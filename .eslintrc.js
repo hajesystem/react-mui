@@ -22,6 +22,8 @@ module.exports = {
 		project: './tsconfig.json',
 	},
 	plugins: ['react', '@typescript-eslint'],
-	rules: {},
+	rules: {
+		'react/require-default-props': 0,
+	},
 	ignorePatterns: ['.eslintrc.js'],
 };
