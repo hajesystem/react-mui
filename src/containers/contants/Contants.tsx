@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Toolbar } from '@mui/material';
-import PageHeader from '../PageHeader';
+import PageHeader from '../pageheader';
 
 type ContantsProps = {
 	drawerWidth: number;

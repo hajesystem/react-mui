@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Box, CssBaseline } from '@mui/material';
-import Aside from '../components/Aside';
-import Header from '../components/Header';
 import customColor from '../color/color';
-import Contants from '../components/Contants';
 import Employees from '../pages';
+import { Aside, Contants, Header } from '../containers';
 
 export default function AdminLayout() {
 	const drawerWidth = 240;

@@ -33,7 +33,7 @@ export default function AsideList() {
 					</ListItem>
 				))}
 			</List>
-			<Divider />
+			<Divider sx={{ borderColor: customColor.fillColor }} />
 			<List>
 				{['All mail', 'Trash', 'Spam'].map((text, index) => (
 					<ListItem key={text} disablePadding>
