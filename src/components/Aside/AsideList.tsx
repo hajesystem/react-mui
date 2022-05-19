@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import customColor from '../../color/color';
 
 export default function AsideList() {
 	return (
@@ -19,12 +20,15 @@ export default function AsideList() {
 						<ListItemButton>
 							<ListItemIcon>
 								{index % 2 === 0 ? (
-									<InboxIcon sx={{ color: '#FFFFFF' }} />
+									<InboxIcon sx={{ color: customColor.fillColor }} />
 								) : (
-									<MailIcon sx={{ color: '#FFFFFF' }} />
+									<MailIcon sx={{ color: customColor.fillColor }} />
 								)}
 							</ListItemIcon>
-							<ListItemText primary={text} sx={{ color: '#FFFFFF' }} />
+							<ListItemText
+								primary={text}
+								sx={{ color: customColor.fillColor }}
+							/>
 						</ListItemButton>
 					</ListItem>
 				))}
@@ -36,12 +40,15 @@ export default function AsideList() {
 						<ListItemButton>
 							<ListItemIcon>
 								{index % 2 === 0 ? (
-									<InboxIcon sx={{ color: '#FFFFFF' }} />
+									<InboxIcon sx={{ color: customColor.fillColor }} />
 								) : (
-									<MailIcon sx={{ color: '#FFFFFF' }} />
+									<MailIcon sx={{ color: customColor.fillColor }} />
 								)}
 							</ListItemIcon>
-							<ListItemText primary={text} sx={{ color: '#FFFFFF' }} />
+							<ListItemText
+								primary={text}
+								sx={{ color: customColor.fillColor }}
+							/>
 						</ListItemButton>
 					</ListItem>
 				))}

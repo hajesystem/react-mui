@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Divider, Drawer } from '@mui/material';
 import Logo from './Logo';
 import AsideList from './AsideList';
+import customColor from '../../color/color';
 
 type SideMenuProps = {
 	mobileOpen: boolean;
@@ -41,7 +42,7 @@ export default function Aside({
 					'& .MuiDrawer-paper': {
 						boxSizing: 'border-box',
 						width: drawerWidth,
-						backgroundColor: '#1976D2',
+						backgroundColor: customColor.themeColor,
 					},
 				}}
 			>
@@ -56,7 +57,7 @@ export default function Aside({
 					'& .MuiDrawer-paper': {
 						boxSizing: 'border-box',
 						width: drawerWidth,
-						backgroundColor: '#1976D2',
+						backgroundColor: customColor.themeColor,
 					},
 				}}
 				open

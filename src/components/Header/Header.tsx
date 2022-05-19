@@ -17,6 +17,7 @@ import AccountMenu from './AccountMenu';
 import MobileMenu from './MobileMenu';
 import ProfileMenu from './ProfileMenu';
 import { Search, SearchIconWrapper, StyledInputBase } from './styled';
+import customColor from '../../color/color';
 
 type HeaderProps = {
 	drawerWidth: number;
@@ -53,6 +54,7 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 			<AppBar
 				position="fixed"
 				sx={{
+					backgroundColor: customColor.themeColor,
 					width: { sm: `calc(100% - ${drawerWidth}px)` },
 					ml: { sm: `${drawerWidth}px` },
 				}}
@@ -66,19 +68,22 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 						onClick={onClick}
 						sx={{ mr: 2, display: { sm: 'none' } }}
 					>
-						<MenuIcon />
+						<MenuIcon sx={{ color: customColor.fillColor }} />
 					</IconButton>
 					<Typography
 						variant="h6"
 						noWrap
 						component="div"
-						sx={{ display: { xs: 'none', sm: 'block' } }}
+						sx={{
+							display: { xs: 'none', sm: 'block' },
+							color: customColor.fillColor,
+						}}
 					>
 						PPMS
 					</Typography>
 					<Search>
 						<SearchIconWrapper>
-							<SearchIcon />
+							<SearchIcon sx={{ color: customColor.fillColor }} />
 						</SearchIconWrapper>
 						<StyledInputBase
 							placeholder="검색"
@@ -93,7 +98,7 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 							color="inherit"
 						>
 							<Badge badgeContent={4} color="error">
-								<MailIcon />
+								<MailIcon sx={{ color: customColor.fillColor }} />
 							</Badge>
 						</IconButton>
 						<IconButton
@@ -102,7 +107,7 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 							color="inherit"
 						>
 							<Badge badgeContent={17} color="error">
-								<NotificationsIcon />
+								<NotificationsIcon sx={{ color: customColor.fillColor }} />
 							</Badge>
 						</IconButton>
 						<IconButton
@@ -114,7 +119,7 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 							onClick={handleProfileMenuOpen}
 							color="inherit"
 						>
-							<AccountCircle />
+							<AccountCircle sx={{ color: customColor.fillColor }} />
 						</IconButton>
 					</Box>
 					<Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -126,7 +131,7 @@ export default function Header({ onClick, drawerWidth }: HeaderProps) {
 							onClick={handleMobileMenuOpen}
 							color="inherit"
 						>
-							<MoreIcon />
+							<MoreIcon sx={{ color: customColor.fillColor }} />
 						</IconButton>
 					</Box>
 				</Toolbar>

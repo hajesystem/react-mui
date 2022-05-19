@@ -8,7 +8,7 @@ type MobileMenuProps = {
 	menuId: string;
 	isMenuOpen: boolean;
 	menuClose: () => void;
-	children: JSX.Element;
+	children?: JSX.Element;
 };
 
 export default function MobileMenu({

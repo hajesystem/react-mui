@@ -1,6 +1,7 @@
 import React from 'react';
 import { IconButton, MenuItem } from '@mui/material';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import customColor from '../../color/color';
 
 type ProfileMenuProps = {
 	onClick: (event: React.MouseEvent<HTMLElement>) => void;
@@ -16,7 +17,7 @@ export default function ProfileMenu({ onClick }: ProfileMenuProps) {
 				aria-haspopup="true"
 				color="inherit"
 			>
-				<AccountCircle />
+				<AccountCircle sx={{ color: customColor.fillColorNegative }} />
 			</IconButton>
 			<p>Profile</p>
 		</MenuItem>

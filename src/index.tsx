@@ -1,7 +1,7 @@
 import { StyledEngineProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './APP/App';
+import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 

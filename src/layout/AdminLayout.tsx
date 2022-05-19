@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
-import './App.css';
 import { Box, CssBaseline } from '@mui/material';
-import Header from '../components/Header';
 import Aside from '../components/Aside';
+import Header from '../components/Header';
+import customColor from '../color/color';
+import Contants from '../components/Contants';
+import Employees from '../pages';
 
-const drawerWidth = 240;
-
-function App() {
+export default function AdminLayout() {
+	const drawerWidth = 240;
 	const [mobileOpen, setMobileOpen] = useState(false);
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);
 	};
-
 	return (
-		<Box sx={{ display: 'flex' }}>
+		<Box
+			sx={{
+				display: 'flex',
+				height: '100vh',
+				backgroundColor: customColor.background,
+			}}
+		>
 			<CssBaseline />
 			<Aside
 				onClick={handleDrawerToggle}
@@ -21,8 +27,9 @@ function App() {
 				drawerWidth={drawerWidth}
 			/>
 			<Header onClick={handleDrawerToggle} drawerWidth={drawerWidth} />
+			<Contants drawerWidth={drawerWidth}>
+				<Employees />
+			</Contants>
 		</Box>
 	);
 }
-
-export default App;
