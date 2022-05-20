@@ -31,8 +31,8 @@ const initialValues: ValuelsType = {
 export default function Employees() {
 	const validate = (fieldValues = values) => {
 		const msg = {
-			user: fieldValues.user ? '' : '이 필드는 필수 항목입니다',
-			phone: fieldValues.phone ? '' : '이 필드는 필수 항목입니다',
+			user: fieldValues.user ? '' : '아이디 필드는 필수 항목입니다',
+			phone: fieldValues.phone ? '' : '전화번호 필드는 필수 항목입니다',
 		};
 		setErrors({ ...msg });
 		// return to boolean
