@@ -26,6 +26,7 @@ export default function Aside({
 			sx={{
 				width: { sm: drawerWidth },
 				flexShrink: { sm: 0 },
+				flexGrow: { sm: 0 },
 			}}
 			aria-label="mailbox folders"
 		>
