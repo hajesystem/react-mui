@@ -1,32 +1,59 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { Button, Paper, Stack, TextField } from '@mui/material';
 import React, { useEffect } from 'react';
-import {
-	AddressInput,
-	PasswordInput,
-	ValidateInput,
-} from '../components/controls';
+import { AddressInput, PasswordInput } from '../components/controls';
 import useForm from '../hooks/useForm';
 
 const iconSize = { fontSize: '1.2rem' };
 
+interface ValuelsType {
+	user: string;
+	password: string;
+	confirmPassword: string;
+	name: string;
+	phone: string;
+	email: string;
+	address: string;
+	addressDetail: string;
+}
+
+const initialValues: ValuelsType = {
+	user: '',
+	password: '',
+	confirmPassword: '',
+	name: '',
+	phone: '',
+	email: '',
+	address: '',
+	addressDetail: '',
+};
+
 export default function Employees() {
-	const initialValues = {
-		user: '',
-		password: '',
-		confirmPassword: '',
-		name: '',
-		phone: '',
-		email: '',
-		address: '',
-		addressDetail: '',
+	const validate = (fieldValues = values) => {
+		const msg = {
+			user: fieldValues.user ? '' : '이 필드는 필수 항목입니다',
+			phone: fieldValues.phone ? '' : '이 필드는 필수 항목입니다',
+		};
+		setErrors({ ...msg });
+		// return to boolean
+		if (fieldValues === values) {
+			return Object.values(msg).every((x) => x === '');
+		}
+		return false;
 	};
-	const { values, handleUpdateFiled, handleClickUpdateFiled } = useForm({
-		initialValues,
-	});
+
+	const {
+		values,
+		handleUpdateFiled,
+		handleClickUpdateFiled,
+		setErrors,
+		errors,
+	} = useForm({ initialValues, validate });
 
 	const handleSubmit = (e: React.SyntheticEvent) => {
 		e.preventDefault();
-		console.log('submit');
+		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+		validate() && console.log('submit');
 	};
 
 	useEffect(() => console.log(values), [values]);
@@ -35,24 +62,21 @@ export default function Employees() {
 		<Paper elevation={3} sx={{ p: 2, mb: 2 }}>
 			<Stack component="form" onSubmit={handleSubmit}>
 				<Stack spacing={3}>
-					<ValidateInput
+					<TextField
 						id="user"
 						name="user"
 						label="아이디"
 						variant="outlined"
-						minLength={5}
-						maxLength={7}
-						required
 						onChange={handleUpdateFiled}
 						size="small"
 						autoComplete="off"
-						helperText=""
+						error={!!errors.user}
+						helperText={errors.user && errors.user}
 					/>
 					<PasswordInput
 						name="password"
 						onChange={handleUpdateFiled}
 						sx={iconSize}
-						error
 						variant="outlined"
 					/>
 					<PasswordInput
@@ -78,6 +102,8 @@ export default function Employees() {
 						onChange={handleUpdateFiled}
 						size="small"
 						autoComplete="off"
+						error={!!errors.phone}
+						helperText={errors.phone && errors.phone}
 					/>
 					<TextField
 						id="email"

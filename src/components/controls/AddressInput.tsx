@@ -9,7 +9,7 @@ import {
 	SxProps,
 	Theme,
 } from '@mui/material';
-import { daumAddress } from '../../utils';
+import { daumAddress } from '../../services';
 
 type AddressInputProps = {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

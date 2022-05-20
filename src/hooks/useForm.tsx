@@ -1,11 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 
 interface UseFormProps {
-	initialValues: object;
+	initialValues: any;
+	validate: (fieldValues?: any) => boolean;
 }
 
-export default function useForm({ initialValues }: UseFormProps) {
+export default function useForm({ initialValues, validate }: UseFormProps) {
 	const [values, setValues] = useState(initialValues);
+	const [errors, setErrors] = useState<any>({});
 
 	const handleUpdateFiled = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
@@ -13,6 +16,7 @@ export default function useForm({ initialValues }: UseFormProps) {
 			...values,
 			[name]: value,
 		});
+		validate({ [name]: value });
 	};
 
 	const handleClickUpdateFiled = (key: string, value: string) => {
@@ -29,5 +33,7 @@ export default function useForm({ initialValues }: UseFormProps) {
 		handleUpdateFiled,
 		handleClickUpdateFiled,
 		resetForm,
+		errors,
+		setErrors,
 	};
 }
