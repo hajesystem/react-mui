@@ -1,8 +1,9 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { Button, Paper, Stack, TextField } from '@mui/material';
 import React, { useEffect } from 'react';
 import { AddressInput, PasswordInput } from '../components/controls';
-import useForm from '../hooks/useForm';
+// import useForm from '../hooks/useForm';
+import useInput from '../hooks/useInput';
+import { min, overlap, required } from '../services/validationMessage';
 
 const iconSize = { fontSize: '1.2rem' };
 
@@ -28,35 +29,47 @@ const initialValues: ValuelsType = {
 	addressDetail: '',
 };
 
+const initialErrors = {
+	user: '',
+	phone: '',
+};
+
+const test = {
+	staus: 'idle',
+	msg: '이미 사용중인 아이디 입니다.',
+};
+
 export default function Employees() {
-	const validate = (fieldValues = values) => {
+	// TODO 초기값과 같으면 검사하지 않음..??
+	const validate: () => boolean = () => {
 		const msg = {
-			user: fieldValues.user ? '' : '아이디 필드는 필수 항목입니다',
-			phone: fieldValues.phone ? '' : '전화번호 필드는 필수 항목입니다',
+			user:
+				(required(values.user) || min(4, values.user) || overlap(test)) &&
+				`${required(values.user)} ${min(4, values.user)} ${overlap(test)}`,
+			phone: required(values.phone),
 		};
 		setErrors({ ...msg });
 		// return to boolean
-		if (fieldValues === values) {
-			return Object.values(msg).every((x) => x === '');
-		}
-		return false;
+		return Object.values(msg).every((x) => x === '');
 	};
 
 	const {
 		values,
 		handleUpdateFiled,
 		handleClickUpdateFiled,
-		setErrors,
 		errors,
-	} = useForm({ initialValues, validate });
+		setErrors,
+	} = useInput(initialValues, initialErrors, validate);
 
 	const handleSubmit = (e: React.SyntheticEvent) => {
 		e.preventDefault();
-		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-		validate() && console.log('submit');
+		if (validate()) {
+			console.log('submit');
+		}
 	};
 
-	useEffect(() => console.log(values), [values]);
+	useEffect(() => console.log('values>>>', values), [values]);
+	useEffect(() => console.log('errors>>>', errors), [errors]);
 
 	return (
 		<Paper elevation={3} sx={{ p: 2, mb: 2 }}>
@@ -65,7 +78,7 @@ export default function Employees() {
 					<TextField
 						id="user"
 						name="user"
-						label="아이디"
+						label="*아이디"
 						variant="outlined"
 						onChange={handleUpdateFiled}
 						size="small"
