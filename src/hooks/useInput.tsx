@@ -18,7 +18,7 @@ export default function useInput<T, S>(
 			[name]: value,
 		});
 		setErrors({ ...errors, [name]: initialValidate[name] });
-		// setOnSubmit(Object.values(errors).every((x) => x === ''));
+		setSubmit(Object.values(errors).every((x) => x === ''));
 	};
 
 	const handleClickUpdateFiled = (key: string, value: string) => {
@@ -31,7 +31,6 @@ export default function useInput<T, S>(
 
 	const onSubmit = async (callback: () => void) => {
 		setErrors(initialValidate);
-		// TODO setSubmit
 		if (Object.values(errors).every((x) => x === '' && submit)) {
 			callback();
 		}
@@ -42,8 +41,6 @@ export default function useInput<T, S>(
 		handleClickUpdateFiled,
 		resetForm,
 		errors,
-		setErrors,
 		onSubmit,
-		setSubmit,
 	};
 }
