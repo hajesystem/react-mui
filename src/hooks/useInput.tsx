@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 
 export default function useInput<T, S>(
+	values: T,
+	setValues: React.Dispatch<React.SetStateAction<T>>,
 	initialValues: T,
 	initialErrors: S,
-	validate: () => boolean
+	initialValidate: any
 ) {
-	const [values, setValues] = useState(initialValues);
 	const [errors, setErrors] = useState(initialErrors);
+	// const [validate, setValidate] = useState(initialValidate);
+	const [submit, setSubmit] = useState(false);
 
 	const handleUpdateFiled = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
@@ -14,7 +17,8 @@ export default function useInput<T, S>(
 			...values,
 			[name]: value,
 		});
-		validate();
+		setErrors({ ...errors, [name]: initialValidate[name] });
+		// setOnSubmit(Object.values(errors).every((x) => x === ''));
 	};
 
 	const handleClickUpdateFiled = (key: string, value: string) => {
@@ -25,13 +29,21 @@ export default function useInput<T, S>(
 		setValues(initialValues);
 	};
 
+	const onSubmit = async (callback: () => void) => {
+		setErrors(initialValidate);
+		// TODO setSubmit
+		if (Object.values(errors).every((x) => x === '' && submit)) {
+			callback();
+		}
+	};
+
 	return {
-		values,
-		setValues,
 		handleUpdateFiled,
 		handleClickUpdateFiled,
 		resetForm,
 		errors,
 		setErrors,
+		onSubmit,
+		setSubmit,
 	};
 }

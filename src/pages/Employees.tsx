@@ -1,5 +1,5 @@
 import { Button, Paper, Stack, TextField } from '@mui/material';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AddressInput, PasswordInput } from '../components/controls';
 // import useForm from '../hooks/useForm';
 import useInput from '../hooks/useInput';
@@ -40,32 +40,28 @@ const test = {
 };
 
 export default function Employees() {
-	// TODO 초기값과 같으면 검사하지 않음..??
-	const validate: () => boolean = () => {
-		const msg = {
-			user:
-				(required(values.user) || min(4, values.user) || overlap(test)) &&
-				`${required(values.user)} ${min(4, values.user)} ${overlap(test)}`,
-			phone: required(values.phone),
-		};
-		setErrors({ ...msg });
-		// return to boolean
-		return Object.values(msg).every((x) => x === '');
+	const [values, setValues] = useState(initialValues);
+
+	const userCondition =
+		!!required(values.user) || !!min(4, values.user) || !!overlap(test);
+
+	const phoneCondition = !!required(values.phone);
+
+	const validate = {
+		user: userCondition
+			? `${required(values.user)} ${min(4, values.user)} ${overlap(test)}`
+			: '',
+		phone: phoneCondition ? required(values.phone) : '',
 	};
 
-	const {
-		values,
-		handleUpdateFiled,
-		handleClickUpdateFiled,
-		errors,
-		setErrors,
-	} = useInput(initialValues, initialErrors, validate);
+	const { handleUpdateFiled, handleClickUpdateFiled, errors, onSubmit } =
+		useInput(values, setValues, initialValues, initialErrors, validate);
 
 	const handleSubmit = (e: React.SyntheticEvent) => {
 		e.preventDefault();
-		if (validate()) {
+		onSubmit(() => {
 			console.log('submit');
-		}
+		});
 	};
 
 	useEffect(() => console.log('values>>>', values), [values]);
