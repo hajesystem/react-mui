@@ -6,18 +6,19 @@ import {
 	InputAdornment,
 	InputLabel,
 	OutlinedInput,
+	OutlinedTextFieldProps,
 	SxProps,
 	Theme,
 } from '@mui/material';
 import { daumAddress } from '../../services';
 
-type AddressInputProps = {
+interface AddressInputProps extends OutlinedTextFieldProps {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 	onIconChange: (key: string, value: string) => void;
-	name: string;
 	nextFocusId: string;
+	name: string;
 	sx?: SxProps<Theme> | undefined;
-};
+}
 
 export default function AddressInput({
 	onChange,
@@ -25,6 +26,7 @@ export default function AddressInput({
 	nextFocusId,
 	sx,
 	name,
+	...props
 }: AddressInputProps) {
 	const [addressValue, setAddressValue] = useState('');
 
@@ -48,9 +50,9 @@ export default function AddressInput({
 		<FormControl variant="outlined" size="small">
 			<InputLabel htmlFor="address">주소</InputLabel>
 			<OutlinedInput
-				id={name}
+				id={props.id}
 				name={name}
-				value={addressValue}
+				value={props.value}
 				onChange={updateFiled}
 				endAdornment={
 					<InputAdornment position="end">

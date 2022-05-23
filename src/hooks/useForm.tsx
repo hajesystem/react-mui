@@ -1,14 +1,14 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 
-interface UseFormProps {
-	initialValues: any;
-	validate: (fieldValues?: any) => boolean;
-}
-
-export default function useForm({ initialValues, validate }: UseFormProps) {
-	const [values, setValues] = useState(initialValues);
-	const [errors, setErrors] = useState<any>({});
+export default function useForm<T, S>(
+	values: T,
+	setValues: React.Dispatch<React.SetStateAction<T>>,
+	initialValues: T,
+	initialErrors: S,
+	validate: any
+) {
+	const [errors, setErrors] = useState(initialErrors);
+	const [submit, setSubmit] = useState(false);
 
 	const handleUpdateFiled = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
@@ -16,24 +16,31 @@ export default function useForm({ initialValues, validate }: UseFormProps) {
 			...values,
 			[name]: value,
 		});
-		validate({ [name]: value });
+		setErrors({ ...errors, [name]: validate[name] });
+		setSubmit(Object.values(errors).every((x) => x === ''));
 	};
 
 	const handleClickUpdateFiled = (key: string, value: string) => {
 		setValues({ ...values, [key]: value });
 	};
 
+	const onSubmit = async (callback: () => void) => {
+		setErrors(validate);
+		if (Object.values(errors).every((msg) => msg === '' && submit)) {
+			callback();
+		}
+	};
+
 	const resetForm = () => {
 		setValues(initialValues);
+		setErrors(initialErrors);
 	};
 
 	return {
-		values,
-		setValues,
 		handleUpdateFiled,
 		handleClickUpdateFiled,
-		resetForm,
 		errors,
-		setErrors,
+		onSubmit,
+		resetForm,
 	};
 }

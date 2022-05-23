@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Box, CssBaseline } from '@mui/material';
 import customColor from '../color/color';
-import Employees from '../pages';
 import { Aside, Contants, Header } from '../containers';
+import FormPage from '../pages';
 
 export default function AdminLayout() {
 	const drawerWidth = 240;
@@ -26,7 +26,7 @@ export default function AdminLayout() {
 			/>
 			<Header onClick={handleDrawerToggle} drawerWidth={drawerWidth} />
 			<Contants drawerWidth={drawerWidth}>
-				<Employees />
+				<FormPage />
 			</Contants>
 		</Box>
 	);

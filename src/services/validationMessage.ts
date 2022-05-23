@@ -6,7 +6,7 @@ export function required(value: string) {
 }
 
 export function min(num: number, value: string) {
-	if (num < value.length) {
+	if (num - 1 < value.length) {
 		return '';
 	}
 	return `${num}자 이상 입력하세요.`;

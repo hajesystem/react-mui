@@ -15,9 +15,9 @@ interface PasswordInputProps extends OutlinedTextFieldProps {
 
 export default function PasswordInput({
 	onChange,
-	name,
 	sx,
 	error,
+	...props
 }: PasswordInputProps) {
 	const [showPassword, setShowPassword] = useState(false);
 	const handleClickShowPassword = () => {
@@ -26,10 +26,11 @@ export default function PasswordInput({
 
 	return (
 		<FormControl variant="outlined" size="small">
-			<InputLabel htmlFor="password">패스워드</InputLabel>
+			<InputLabel htmlFor={props.name}>{props.label}</InputLabel>
 			<OutlinedInput
-				id={name}
-				name={name}
+				id={props.id}
+				name={props.name}
+				value={props.value}
 				type={showPassword ? 'text' : 'password'}
 				onChange={onChange}
 				error={error}
@@ -44,7 +45,7 @@ export default function PasswordInput({
 						</IconButton>
 					</InputAdornment>
 				}
-				label={name}
+				label={props.label}
 			/>
 		</FormControl>
 	);

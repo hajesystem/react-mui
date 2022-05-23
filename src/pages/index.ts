@@ -1,3 +1,3 @@
-import Employees from './Employees';
+import FormPage from './FormPage';
 
-export default Employees;
+export default FormPage;
