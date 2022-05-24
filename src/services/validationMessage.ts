@@ -6,34 +6,30 @@ export function required(value: string) {
 }
 
 export function min(num: number, value: string) {
-	if (num - 1 < value.length) {
+	if (!value || num - 1 < value.length) {
 		return '';
 	}
 	return `${num}자 이상 입력하세요.`;
 }
 
 export function max(num: number, value: string) {
-	if (num >= value.length) {
+	if (!value || num >= value.length) {
 		return '';
 	}
 	return `${num + 1}자 이하 입력하세요.`;
 }
 
 export function pattern(regExp: RegExp, value: string, msg: string) {
-	if (regExp.test(value)) {
+	if (!value || regExp.test(value)) {
 		return '';
 	}
 	return msg;
 }
 
-// TODO email phoneNumber
+// TODO fetch API
 export function overlap(value: { staus: string; msg: string }) {
-	if (value.staus !== 'error') {
+	if (!value || value.staus !== 'error') {
 		return '';
 	}
 	return value.msg;
-}
-
-export function email(value: string) {
-	console.log(value);
 }

@@ -4,10 +4,11 @@ export default function useForm<T, S>(
 	values: T,
 	setValues: React.Dispatch<React.SetStateAction<T>>,
 	initialValues: T,
-	initialErrors: S,
-	validate: any
+	initialValidationMessages: S
 ) {
-	const [errors, setErrors] = useState(initialErrors);
+	const [validationMessages, setValidationMessges] = useState(
+		initialValidationMessages
+	);
 	const [submit, setSubmit] = useState(false);
 
 	const handleUpdateFiled = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,8 +17,7 @@ export default function useForm<T, S>(
 			...values,
 			[name]: value,
 		});
-		setErrors({ ...errors, [name]: validate[name] });
-		setSubmit(Object.values(errors).every((x) => x === ''));
+		setSubmit(Object.values(validationMessages).every((msg) => msg === ''));
 	};
 
 	const handleClickUpdateFiled = (key: string, value: string) => {
@@ -25,22 +25,28 @@ export default function useForm<T, S>(
 	};
 
 	const onSubmit = async (callback: () => void) => {
-		setErrors(validate);
-		console.log('submit>>', submit);
-		if (Object.values(errors).every((msg) => msg === '' && submit)) {
+		if (Object.values(values).every((value) => value === '')) {
+			// TODO 모달띄우기
+			alert('필드에 입력값이 있어야 합니다.');
+		}
+		if (
+			Object.values(validationMessages).every((msg) => msg === '' && submit)
+		) {
 			callback();
 		} else console.log('error');
 	};
 
 	const resetForm = () => {
+		setSubmit(false);
 		setValues(initialValues);
-		setErrors(initialErrors);
+		setValidationMessges(initialValidationMessages);
 	};
 
 	return {
 		handleUpdateFiled,
 		handleClickUpdateFiled,
-		errors,
+		validationMessages,
+		setValidationMessges,
 		onSubmit,
 		resetForm,
 	};

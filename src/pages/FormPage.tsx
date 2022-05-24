@@ -31,19 +31,21 @@ export default function FormPage() {
 		addressDetail: '',
 	};
 
-	const initialErrors = {
+	// initialValidationMessages 타입스크립트에서 제너릭을 사용하기 위한 초기값을 선언한다.
+	const initialValidationMessages = {
 		user: '',
 		phone: '',
 		email: '',
 	};
+	// useForm에서 선언하지 않는 이유는 변수 선언을 맨 위로 올리기 위하여 먼저 선언한다.
+	const [values, setValues] = useState(initialValues);
 
+	// fatch API 리턴 테스트값
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const test = {
 		staus: 'idle',
 		msg: '이미 사용중인 아이디 입니다.',
 	};
-
-	const [values, setValues] = useState(initialValues);
 
 	const userMsg =
 		required(values.user) +
@@ -51,39 +53,43 @@ export default function FormPage() {
 		overlap(test);
 
 	const phoneMsg = required(values.phone);
+
 	const emailMsg = pattern(
 		regexp.email.pattern,
 		values.email,
 		regexp.email.msg
 	);
 
-	const validate = {
-		user: userMsg || '',
-		phone: phoneMsg || '',
-		email: emailMsg || '',
-	};
+	// 에러 메세지 업데이트
+	useEffect(() => {
+		const valuesCondition = Object.values(values).every(
+			(value) => value === ''
+		);
+		if (!valuesCondition) {
+			setValidationMessges({
+				user: userMsg || '',
+				phone: phoneMsg || '',
+				email: emailMsg || '',
+			});
+		}
+	}, [values.user, values.phone, values.email]);
 
 	const {
 		handleUpdateFiled,
 		handleClickUpdateFiled,
-		errors,
+		validationMessages,
+		setValidationMessges,
 		onSubmit,
 		resetForm,
-	} = useForm(values, setValues, initialValues, initialErrors, validate);
+	} = useForm(values, setValues, initialValues, initialValidationMessages);
 
 	const handleSubmit = (e: React.SyntheticEvent) => {
 		e.preventDefault();
 		onSubmit(() => {
 			console.log('submit');
+			console.log('values>>>', values);
 		});
 	};
-
-	useEffect(
-		() => console.log('user len>>>', values.user.length),
-		[values.user]
-	);
-	useEffect(() => console.log('values>>>', values), [values]);
-	useEffect(() => console.log('errors>>>', errors), [errors]);
 
 	return (
 		<Paper elevation={3} sx={{ p: 2, mb: 2 }}>
@@ -97,8 +103,8 @@ export default function FormPage() {
 						onChange={handleUpdateFiled}
 						size="small"
 						autoComplete="off"
-						error={!!errors.user}
-						helperText={errors.user && errors.user}
+						error={!!validationMessages.user}
+						helperText={validationMessages.user}
 					/>
 					<PasswordInput
 						name="password"
@@ -133,8 +139,8 @@ export default function FormPage() {
 						onChange={handleUpdateFiled}
 						size="small"
 						autoComplete="off"
-						error={!!errors.phone}
-						helperText={errors.phone && errors.phone}
+						error={!!validationMessages.phone}
+						helperText={validationMessages.phone}
 					/>
 					<TextField
 						name="email"
@@ -144,8 +150,8 @@ export default function FormPage() {
 						onChange={handleUpdateFiled}
 						size="small"
 						autoComplete="off"
-						error={!!errors.email && !!values.email}
-						helperText={errors.email && errors.email}
+						error={!!validationMessages.email}
+						helperText={validationMessages.email}
 					/>
 					<AddressInput
 						name="address"
@@ -176,7 +182,7 @@ export default function FormPage() {
 					등록신청
 				</Button>
 				<Button
-					variant="contained"
+					variant="outlined"
 					size="large"
 					sx={{ marginTop: '1rem' }}
 					onClick={resetForm}
