@@ -19,11 +19,11 @@ export function max(num: number, value: string) {
 	return `${num + 1}자 이하 입력하세요.`;
 }
 
-export function pattern(regExp: RegExp, value: string) {
+export function pattern(regExp: RegExp, value: string, msg: string) {
 	if (regExp.test(value)) {
 		return '';
 	}
-	return `지정된 형식과 일치하지 않습니다.`;
+	return msg;
 }
 
 // TODO email phoneNumber

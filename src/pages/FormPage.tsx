@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Button, Paper, Stack, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { AddressInput, PasswordInput } from '../components/controls';
-// import useForm from '../hooks/useForm';
 import useForm from '../hooks/useForm';
-import { min, overlap, required } from '../services/validationMessage';
+import { overlap, pattern, required } from '../services/validationMessage';
+import * as regexp from '../services/pattern';
 
 const iconSize = { fontSize: '1.2rem' };
 
@@ -18,40 +19,48 @@ interface ValuelsType {
 	addressDetail: string;
 }
 
-const initialValues: ValuelsType = {
-	user: '',
-	password: '',
-	confirmPassword: '',
-	name: '',
-	phone: '',
-	email: '',
-	address: '',
-	addressDetail: '',
-};
-
-const initialErrors = {
-	user: '',
-	phone: '',
-};
-
-const test = {
-	staus: 'idle',
-	msg: '이미 사용중인 아이디 입니다.',
-};
-
 export default function FormPage() {
+	const initialValues: ValuelsType = {
+		user: '',
+		password: '',
+		confirmPassword: '',
+		name: '',
+		phone: '',
+		email: '',
+		address: '',
+		addressDetail: '',
+	};
+
+	const initialErrors = {
+		user: '',
+		phone: '',
+		email: '',
+	};
+
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	const test = {
+		staus: 'idle',
+		msg: '이미 사용중인 아이디 입니다.',
+	};
+
 	const [values, setValues] = useState(initialValues);
 
-	const userCondition =
-		!!required(values.user) || !!min(5, values.user) || !!overlap(test);
+	const userMsg =
+		required(values.user) +
+		pattern(regexp.username.pattern, values.user, regexp.username.msg) +
+		overlap(test);
 
-	const phoneCondition = !!required(values.phone);
+	const phoneMsg = required(values.phone);
+	const emailMsg = pattern(
+		regexp.email.pattern,
+		values.email,
+		regexp.email.msg
+	);
 
 	const validate = {
-		user: userCondition
-			? `${required(values.user)} ${min(5, values.user)} ${overlap(test)}`
-			: '',
-		phone: phoneCondition ? required(values.phone) : '',
+		user: userMsg || '',
+		phone: phoneMsg || '',
+		email: emailMsg || '',
 	};
 
 	const {
@@ -135,6 +144,8 @@ export default function FormPage() {
 						onChange={handleUpdateFiled}
 						size="small"
 						autoComplete="off"
+						error={!!errors.email && !!values.email}
+						helperText={errors.email && errors.email}
 					/>
 					<AddressInput
 						name="address"

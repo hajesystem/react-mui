@@ -26,9 +26,10 @@ export default function useForm<T, S>(
 
 	const onSubmit = async (callback: () => void) => {
 		setErrors(validate);
+		console.log('submit>>', submit);
 		if (Object.values(errors).every((msg) => msg === '' && submit)) {
 			callback();
-		}
+		} else console.log('error');
 	};
 
 	const resetForm = () => {
