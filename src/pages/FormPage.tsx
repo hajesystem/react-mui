@@ -5,6 +5,7 @@ import { AddressInput, PasswordInput } from '../components/controls';
 import useForm from '../hooks/useForm';
 import { overlap, pattern, required } from '../services/validationMessage';
 import * as regexp from '../services/pattern';
+import PhoneInput from '../components/controls/PhoneInput';
 
 const iconSize = { fontSize: '1.2rem' };
 
@@ -49,10 +50,14 @@ export default function FormPage() {
 
 	const userMsg =
 		required(values.user) +
-		pattern(regexp.username.pattern, values.user, regexp.username.msg) +
+		pattern(regexp.username.pattern, regexp.username.msg, values.user) +
 		overlap(test);
 
-	const phoneMsg = required(values.phone);
+	const phoneMsg = pattern(
+		regexp.phone.pattern,
+		regexp.phone.msg,
+		values.phone
+	);
 
 	const emailMsg = pattern(
 		regexp.email.pattern,
@@ -131,7 +136,7 @@ export default function FormPage() {
 						size="small"
 						autoComplete="off"
 					/>
-					<TextField
+					<PhoneInput
 						name="phone"
 						value={values.phone}
 						label="휴대전화"

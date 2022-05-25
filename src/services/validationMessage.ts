@@ -19,7 +19,7 @@ export function max(num: number, value: string) {
 	return `${num + 1}자 이하 입력하세요.`;
 }
 
-export function pattern(regExp: RegExp, value: string, msg: string) {
+export function pattern(regExp: RegExp, msg: string, value: string) {
 	if (!value || regExp.test(value)) {
 		return '';
 	}
