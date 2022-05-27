@@ -1,11 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Button, Paper, Stack, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import NumberFormat from 'react-number-format';
 import { AddressInput, PasswordInput } from '../components/controls';
 import useForm from '../hooks/useForm';
-import { overlap, pattern, required } from '../services/validationMessage';
-import * as regexp from '../services/pattern';
-import PhoneInput from '../components/controls/PhoneInput';
+import * as message from '../services/validationMessage';
+import * as pattern from '../services/pattern';
 
 const iconSize = { fontSize: '1.2rem' };
 
@@ -49,20 +48,22 @@ export default function FormPage() {
 	};
 
 	const userMsg =
-		required(values.user) +
-		pattern(regexp.username.pattern, regexp.username.msg, values.user) +
-		overlap(test);
+		message.required(values.user) +
+		message.pattern(
+			pattern.username.pattern,
+			pattern.username.msg,
+			values.user
+		) +
+		message.overlap(test);
 
-	const phoneMsg = pattern(
-		regexp.phone.pattern,
-		regexp.phone.msg,
-		values.phone
-	);
+	// TODO 패스워드 메세지 작업
 
-	const emailMsg = pattern(
-		regexp.email.pattern,
-		values.email,
-		regexp.email.msg
+	const phoneMsg = message.mobilPhoneNumber(values.phone);
+
+	const emailMsg = message.pattern(
+		pattern.email.pattern,
+		pattern.email.msg,
+		values.email
 	);
 
 	// 에러 메세지 업데이트
@@ -72,11 +73,13 @@ export default function FormPage() {
 		);
 		if (!valuesCondition) {
 			setValidationMessges({
-				user: userMsg || '',
-				phone: phoneMsg || '',
-				email: emailMsg || '',
+				...validationMessages,
+				user: userMsg,
+				phone: phoneMsg.msg,
+				email: emailMsg,
 			});
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [values.user, values.phone, values.email]);
 
 	const {
@@ -95,6 +98,7 @@ export default function FormPage() {
 			console.log('values>>>', values);
 		});
 	};
+	useEffect(() => console.log('values>>>', values), [values]);
 
 	return (
 		<Paper elevation={3} sx={{ p: 2, mb: 2 }}>
@@ -136,7 +140,11 @@ export default function FormPage() {
 						size="small"
 						autoComplete="off"
 					/>
-					<PhoneInput
+					<NumberFormat
+						customInput={TextField}
+						format={phoneMsg.format}
+						allowLeadingZeros
+						allowNegative={false}
 						name="phone"
 						value={values.phone}
 						label="휴대전화"
