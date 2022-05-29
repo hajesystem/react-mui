@@ -44,6 +44,7 @@ export function mobilPhoneNumber(number: string) {
 	return { format: undefined, msg: '휴대폰 형식이 아닙니다.' };
 }
 
+// react-number-format을 위한 format형식 리턴.
 export function phoneNumber(number: string) {
 	const message = (reg: RegExp, value: string) =>
 		reg.test(value) ? '' : '전화번호 형식이 아닙니다.';

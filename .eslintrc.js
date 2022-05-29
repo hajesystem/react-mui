@@ -26,6 +26,7 @@ module.exports = {
 		'react/require-default-props': 0,
 		'no-use-before-define': 0,
 		'@typescript-eslint/no-use-before-define': 0,
+		'react-hooks/exhaustive-deps': 'warn',
 	},
 	ignorePatterns: ['.eslintrc.js'],
 };

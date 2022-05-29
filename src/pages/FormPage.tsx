@@ -79,7 +79,6 @@ export default function FormPage() {
 				email: emailMsg,
 			});
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [values.user, values.phone, values.email]);
 
 	const {
