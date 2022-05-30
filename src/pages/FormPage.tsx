@@ -22,7 +22,7 @@ type ValuelsType = {
 	email: string;
 	address: string;
 	addressDetail: string;
-	department: string | null;
+	department: string;
 };
 
 export default function FormPage() {
@@ -103,12 +103,12 @@ export default function FormPage() {
 
 	// select input
 	const departmentOptions: OptionType[] = [
-		{ id: 1, value: '관리부', label: '관리부 라벨' },
-		{ id: 2, value: '출력팀', label: '출력팀 라벨' },
-		{ id: 3, value: '디지털출력팀', label: '디지털출력팀 라벨' },
-		{ id: 4, value: '인쇄제작부', label: '인쇄제작부 라벨' },
-		{ id: 5, value: '디자인팀', label: '디자인팀 라벨' },
-		{ id: 6, value: '영업부', label: '영업부 라벨' },
+		{ id: 1, label: '관리부' },
+		{ id: 2, label: '출력팀' },
+		{ id: 3, label: '디지털출력팀' },
+		{ id: 4, label: '인쇄제작부' },
+		{ id: 5, label: '디자인팀' },
+		{ id: 6, label: '영업부' },
 	];
 
 	const {
@@ -220,6 +220,7 @@ export default function FormPage() {
 						autoComplete="off"
 					/>
 					<SearchSelectInput
+						initialValue={values.department}
 						name="department"
 						options={departmentOptions}
 						onChange={selectUpdateFiled}

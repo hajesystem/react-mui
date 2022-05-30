@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { OptionType } from '../types';
 
 export default function useForm<T, S>(
 	values: T,
@@ -20,14 +21,13 @@ export default function useForm<T, S>(
 		setSubmit(Object.values(validationMessages).every((msg) => msg === ''));
 	};
 
-	const selectUpdateFiled = (
-		name: string,
-		options: { id: number; value: string; label: string } | null
-	) => {
+	// 정의값을 id 또는 value로 변경
+	const selectUpdateFiled = (name: string, options: OptionType | null) => {
 		if (options) {
 			setValues({
 				...values,
-				[name]: options.value,
+				// [name]: options.id,
+				[name]: options.label,
 			});
 			setSubmit(Object.values(validationMessages).every((msg) => msg === ''));
 		}
