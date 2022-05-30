@@ -1,14 +1,19 @@
 import { Button, Paper, Stack, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import NumberFormat from 'react-number-format';
-import { AddressInput, PasswordInput } from '../components/controls';
+import {
+	AddressInput,
+	PasswordInput,
+	SearchSelectInput,
+} from '../components/controls';
 import useForm from '../hooks/useForm';
 import * as message from '../services/validationMessage';
 import * as pattern from '../services/pattern';
+import { OptionType } from '../types';
 
 const iconSize = { fontSize: '1.2rem' };
 
-interface ValuelsType {
+type ValuelsType = {
 	user: string;
 	password: string;
 	confirmPassword: string;
@@ -17,7 +22,8 @@ interface ValuelsType {
 	email: string;
 	address: string;
 	addressDetail: string;
-}
+	department: string | null;
+};
 
 export default function FormPage() {
 	const initialValues: ValuelsType = {
@@ -29,11 +35,14 @@ export default function FormPage() {
 		email: '',
 		address: '',
 		addressDetail: '',
+		department: '',
 	};
 
 	// initialValidationMessages 타입스크립트에서 제너릭을 사용하기 위한 초기값을 선언한다.
 	const initialValidationMessages = {
 		user: '',
+		password: '',
+		confirmPassword: '',
 		phone: '',
 		email: '',
 	};
@@ -41,7 +50,6 @@ export default function FormPage() {
 	const [values, setValues] = useState(initialValues);
 
 	// fatch API 리턴 테스트값
-	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const test = {
 		staus: 'idle',
 		msg: '이미 사용중인 아이디 입니다.',
@@ -56,7 +64,11 @@ export default function FormPage() {
 		) +
 		message.overlap(test);
 
-	// TODO 패스워드 메세지 작업
+	//  패스워드 메세지
+	const passwordMsg = message.required(values.password);
+	const confirmPasswordMsg =
+		message.required(values.confirmPassword) +
+		message.match(values.password, values.confirmPassword);
 
 	const phoneMsg = message.mobilPhoneNumber(values.phone);
 
@@ -75,14 +87,33 @@ export default function FormPage() {
 			setValidationMessges({
 				...validationMessages,
 				user: userMsg,
-				phone: phoneMsg.msg,
+				password: passwordMsg,
+				confirmPassword: confirmPasswordMsg,
+				phone: values.phone ? phoneMsg.msg : '',
 				email: emailMsg,
 			});
 		}
-	}, [values.user, values.phone, values.email]);
+	}, [
+		values.user,
+		values.password,
+		values.confirmPassword,
+		values.phone,
+		values.email,
+	]);
+
+	// select input
+	const departmentOptions: OptionType[] = [
+		{ id: 1, value: '관리부', label: '관리부 라벨' },
+		{ id: 2, value: '출력팀', label: '출력팀 라벨' },
+		{ id: 3, value: '디지털출력팀', label: '디지털출력팀 라벨' },
+		{ id: 4, value: '인쇄제작부', label: '인쇄제작부 라벨' },
+		{ id: 5, value: '디자인팀', label: '디자인팀 라벨' },
+		{ id: 6, value: '영업부', label: '영업부 라벨' },
+	];
 
 	const {
 		handleUpdateFiled,
+		selectUpdateFiled,
 		handleClickUpdateFiled,
 		validationMessages,
 		setValidationMessges,
@@ -116,19 +147,23 @@ export default function FormPage() {
 					/>
 					<PasswordInput
 						name="password"
-						label="패스워드"
+						label="*패스워드"
 						value={values.password}
 						onChange={handleUpdateFiled}
 						sx={iconSize}
 						variant="outlined"
+						error={!!validationMessages.password}
+						helperText={validationMessages.password}
 					/>
 					<PasswordInput
 						name="confirmPassword"
-						label="패스워드 확인"
+						label="*패스워드 확인"
 						value={values.confirmPassword}
 						onChange={handleUpdateFiled}
 						sx={iconSize}
 						variant="outlined"
+						error={!!validationMessages.confirmPassword}
+						helperText={validationMessages.confirmPassword}
 					/>
 					<TextField
 						name="name"
@@ -183,6 +218,13 @@ export default function FormPage() {
 						onChange={handleUpdateFiled}
 						size="small"
 						autoComplete="off"
+					/>
+					<SearchSelectInput
+						name="department"
+						options={departmentOptions}
+						onChange={selectUpdateFiled}
+						label="부서"
+						size="small"
 					/>
 				</Stack>
 				<Button

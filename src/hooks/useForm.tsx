@@ -20,6 +20,19 @@ export default function useForm<T, S>(
 		setSubmit(Object.values(validationMessages).every((msg) => msg === ''));
 	};
 
+	const selectUpdateFiled = (
+		name: string,
+		options: { id: number; value: string; label: string } | null
+	) => {
+		if (options) {
+			setValues({
+				...values,
+				[name]: options.value,
+			});
+			setSubmit(Object.values(validationMessages).every((msg) => msg === ''));
+		}
+	};
+
 	const handleClickUpdateFiled = (key: string, value: string) => {
 		setValues({ ...values, [key]: value });
 	};
@@ -44,6 +57,7 @@ export default function useForm<T, S>(
 
 	return {
 		handleUpdateFiled,
+		selectUpdateFiled,
 		handleClickUpdateFiled,
 		validationMessages,
 		setValidationMessges,

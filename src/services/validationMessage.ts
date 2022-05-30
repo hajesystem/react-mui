@@ -19,6 +19,13 @@ export function max(num: number, value: string) {
 	return `${num + 1}자 이하 입력하세요.`;
 }
 
+export function match(value: string | number, confirmValue: string | number) {
+	if (value === confirmValue) {
+		return '';
+	}
+	return '일치하지 않습니다.';
+}
+
 export function pattern(regExp: RegExp, msg: string, value: string) {
 	if (!value || regExp.test(value)) {
 		return '';

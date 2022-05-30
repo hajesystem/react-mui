@@ -15,8 +15,6 @@ interface PasswordInputProps extends OutlinedTextFieldProps {
 
 export default function PasswordInput({
 	onChange,
-	sx,
-	error,
 	...props
 }: PasswordInputProps) {
 	const [showPassword, setShowPassword] = useState(false);
@@ -33,14 +31,18 @@ export default function PasswordInput({
 				value={props.value}
 				type={showPassword ? 'text' : 'password'}
 				onChange={onChange}
-				error={error}
+				error={props.error}
 				endAdornment={
 					<InputAdornment position="end">
-						<IconButton edge="end" onClick={handleClickShowPassword}>
+						<IconButton
+							tabIndex={-1}
+							edge="end"
+							onClick={handleClickShowPassword}
+						>
 							{showPassword ? (
-								<Visibility sx={sx} />
+								<Visibility sx={props.sx} />
 							) : (
-								<VisibilityOff sx={sx} />
+								<VisibilityOff sx={props.sx} />
 							)}
 						</IconButton>
 					</InputAdornment>

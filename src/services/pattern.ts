@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-escape */
 export const username = {
-	pattern: /^[A-Za-z0-9]{4,12}$/,
-	msg: '영문,숫자만 사용가능하며, 최소 4글자 이상 최대 12글자까지 입력',
+	pattern: /^[A-Za-z0-9]{4,32}$/,
+	msg: '영문,숫자만 사용가능하며, 최소 4글자 이상 최대 32글자까지 입력',
 };
 
 export const email = {

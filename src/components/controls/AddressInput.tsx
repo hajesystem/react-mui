@@ -7,8 +7,6 @@ import {
 	InputLabel,
 	OutlinedInput,
 	OutlinedTextFieldProps,
-	SxProps,
-	Theme,
 } from '@mui/material';
 import { daumAddress } from '../../services';
 
@@ -17,7 +15,6 @@ interface AddressInputProps extends OutlinedTextFieldProps {
 	onIconChange: (key: string, value: string) => void;
 	nextFocusId: string;
 	name: string;
-	sx?: SxProps<Theme> | undefined;
 }
 
 export default function AddressInput({
@@ -41,10 +38,7 @@ export default function AddressInput({
 
 	useEffect(() => {
 		onIconChange(name, addressValue);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [addressValue]);
-
-	useEffect(() => console.log('addressValue>>', addressValue), [addressValue]);
 
 	return (
 		<FormControl variant="outlined" size="small">
@@ -56,7 +50,7 @@ export default function AddressInput({
 				onChange={updateFiled}
 				endAdornment={
 					<InputAdornment position="end">
-						<IconButton onClick={addressHandleClick} edge="end">
+						<IconButton tabIndex={-1} onClick={addressHandleClick} edge="end">
 							<LocationOn sx={sx} />
 						</IconButton>
 					</InputAdornment>
