@@ -1,9 +1,9 @@
 import { Autocomplete, TextField } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
 import { OptionType } from '../../types';
 
 interface SearchSelectInputProps {
-	initialValue: string;
+	defaultValue: string | number | null;
 	name: string;
 	onChange: (name: string, options: OptionType | null) => void;
 	options: OptionType[];
@@ -12,18 +12,24 @@ interface SearchSelectInputProps {
 }
 
 export default function SearchSelectInput({
-	initialValue,
+	defaultValue,
 	name,
 	onChange,
 	options,
 	size,
 	label,
 }: SearchSelectInputProps) {
-	const [inputValue, setInputValue] = useState(initialValue);
+	// 디폴트 값이 숫자인지 문자인지 확인한다.
+	const type = typeof defaultValue;
+	const values =
+		type === 'string'
+			? options.filter((x) => x.label === defaultValue)
+			: options.filter((x) => x.id === defaultValue);
 	return (
 		<Autocomplete
-			inputValue={inputValue ? initialValue : ''}
-			onInputChange={(_event, value) => setInputValue(value)}
+			// key >> 값이 변경이 되면 value가 초기화 된다.
+			key={defaultValue}
+			value={values[0]}
 			isOptionEqualToValue={(option, value) => option.label === value.label}
 			onChange={(_event, newValue: OptionType | null) => {
 				onChange(name, newValue);

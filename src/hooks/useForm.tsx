@@ -10,7 +10,7 @@ export default function useForm<T, S>(
 	const [validationMessages, setValidationMessges] = useState(
 		initialValidationMessages
 	);
-	const [submit, setSubmit] = useState(false);
+	const [submitStaus, setSubmitStaus] = useState(false);
 
 	const handleUpdateFiled = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
@@ -18,18 +18,40 @@ export default function useForm<T, S>(
 			...values,
 			[name]: value,
 		});
-		setSubmit(Object.values(validationMessages).every((msg) => msg === ''));
+		setSubmitStaus(
+			Object.values(validationMessages).every((msg) => msg === '')
+		);
 	};
 
-	// 정의값을 id 또는 value로 변경
-	const selectUpdateFiled = (name: string, options: OptionType | null) => {
+	// 선택시 label to value 업데이트
+	const handleSelectLabelUpdateFiled = (
+		name: string,
+		options: OptionType | null
+	) => {
 		if (options) {
 			setValues({
 				...values,
-				// [name]: options.id,
 				[name]: options.label,
 			});
-			setSubmit(Object.values(validationMessages).every((msg) => msg === ''));
+			setSubmitStaus(
+				Object.values(validationMessages).every((msg) => msg === '')
+			);
+		}
+	};
+
+	// 선택시 id to value 업데이트
+	const handleSelectIdUpdateFiled = (
+		name: string,
+		options: OptionType | null
+	) => {
+		if (options) {
+			setValues({
+				...values,
+				[name]: options.id,
+			});
+			setSubmitStaus(
+				Object.values(validationMessages).every((msg) => msg === '')
+			);
 		}
 	};
 
@@ -38,26 +60,31 @@ export default function useForm<T, S>(
 	};
 
 	const onSubmit = async (callback: () => void) => {
-		if (Object.values(values).every((value) => value === '')) {
+		if (
+			Object.values(values).every((value) => value === '' || value === null)
+		) {
 			// TODO 모달띄우기
 			alert('필드에 입력값이 있어야 합니다.');
 		}
 		if (
-			Object.values(validationMessages).every((msg) => msg === '' && submit)
+			Object.values(validationMessages).every(
+				(msg) => msg === '' && submitStaus
+			)
 		) {
 			callback();
 		} else console.log('error');
 	};
 
 	const resetForm = () => {
-		setSubmit(false);
+		setSubmitStaus(false);
 		setValues(initialValues);
 		setValidationMessges(initialValidationMessages);
 	};
 
 	return {
 		handleUpdateFiled,
-		selectUpdateFiled,
+		handleSelectIdUpdateFiled,
+		handleSelectLabelUpdateFiled,
 		handleClickUpdateFiled,
 		validationMessages,
 		setValidationMessges,

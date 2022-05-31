@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import {
-	FormControl,
 	IconButton,
 	InputAdornment,
-	InputLabel,
-	OutlinedInput,
 	OutlinedTextFieldProps,
+	TextField,
 } from '@mui/material';
 
 interface PasswordInputProps extends OutlinedTextFieldProps {
@@ -23,16 +21,19 @@ export default function PasswordInput({
 	};
 
 	return (
-		<FormControl variant="outlined" size="small">
-			<InputLabel htmlFor={props.name}>{props.label}</InputLabel>
-			<OutlinedInput
-				id={props.id}
-				name={props.name}
-				value={props.value}
-				type={showPassword ? 'text' : 'password'}
-				onChange={onChange}
-				error={props.error}
-				endAdornment={
+		<TextField
+			id={props.id}
+			name={props.name}
+			value={props.value}
+			variant={props.variant}
+			size={props.size}
+			sx={props.sx}
+			type={showPassword ? 'text' : 'password'}
+			onChange={onChange}
+			error={props.error}
+			helperText={props.helperText}
+			InputProps={{
+				endAdornment: (
 					<InputAdornment position="end">
 						<IconButton
 							tabIndex={-1}
@@ -46,9 +47,10 @@ export default function PasswordInput({
 							)}
 						</IconButton>
 					</InputAdornment>
-				}
-				label={props.label}
-			/>
-		</FormControl>
+				),
+			}}
+			label={props.label}
+		/>
+		// </FormControl>
 	);
 }
