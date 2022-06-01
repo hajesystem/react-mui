@@ -55,6 +55,10 @@ export default function useForm<T, S>(
 		}
 	};
 
+	const handleDateUpdateFiled = (name: string, value: string | null) => {
+		setValues({ ...values, [name]: value });
+	};
+
 	const handleClickUpdateFiled = (key: string, value: string) => {
 		setValues({ ...values, [key]: value });
 	};
@@ -85,6 +89,7 @@ export default function useForm<T, S>(
 		handleUpdateFiled,
 		handleSelectIdUpdateFiled,
 		handleSelectLabelUpdateFiled,
+		handleDateUpdateFiled,
 		handleClickUpdateFiled,
 		validationMessages,
 		setValidationMessges,

@@ -2,9 +2,12 @@ import { Button, Paper, Stack, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import NumberFormat from 'react-number-format';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { ko } from 'date-fns/locale';
 import {
 	AddressInput,
+	DatePickerInput,
+	MobileDatePickerInput,
 	PasswordInput,
 	SearchSelectInput,
 } from '../components/controls';
@@ -27,6 +30,8 @@ type ValuelsType = {
 	department: string;
 	departmentId: number | null;
 	date: string;
+	datePicker: string | null;
+	mobileDatePicker: string | null;
 };
 
 export default function FormPage() {
@@ -42,6 +47,8 @@ export default function FormPage() {
 		department: '',
 		departmentId: null,
 		date: '',
+		datePicker: null,
+		mobileDatePicker: '2022-06-02',
 	};
 
 	// initialValidationMessages 타입스크립트에서 제너릭을 사용하기 위한 초기값을 선언한다.
@@ -139,6 +146,7 @@ export default function FormPage() {
 		handleUpdateFiled,
 		handleSelectIdUpdateFiled,
 		handleSelectLabelUpdateFiled,
+		handleDateUpdateFiled,
 		handleClickUpdateFiled,
 		validationMessages,
 		setValidationMessges,
@@ -168,7 +176,7 @@ export default function FormPage() {
 	useEffect(() => console.log('values>>>', values), [values]);
 
 	return (
-		<LocalizationProvider dateAdapter={AdapterMoment}>
+		<LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={ko}>
 			<Paper elevation={3} sx={{ p: 2, mb: 2 }}>
 				<Stack component="form" onSubmit={handleSubmit}>
 					<Stack spacing={3}>
@@ -286,6 +294,20 @@ export default function FormPage() {
 							InputLabelProps={{
 								shrink: true,
 							}}
+						/>
+						<DatePickerInput
+							label="date picker"
+							name="datePicker"
+							value={values.datePicker}
+							size="small"
+							onChange={handleDateUpdateFiled}
+						/>
+						<MobileDatePickerInput
+							label="date picker"
+							name="mobileDatePicker"
+							value={values.mobileDatePicker}
+							size="small"
+							onChange={handleDateUpdateFiled}
 						/>
 					</Stack>
 					<Button
