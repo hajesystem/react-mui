@@ -1,6 +1,6 @@
 [
 	{
-		"id": "1",
+		"id": 1,
 		"companyName": "(주) 동양잉크 서부",
 		"representative": "최대광",
 		"address": "경기도 파주시 신촌3로 22(신촌동)",
@@ -11,7 +11,7 @@
 		"phone": ""
 	},
 	{
-		"id": "2",
+		"id": 2,
 		"companyName": "(주) 디자인퍼니",
 		"representative": "임규현",
 		"address": "경기도 고양시 일산동구 장백로 20 102908(백성동,동문굿모닝힐1차)",
@@ -22,7 +22,7 @@
 		"phone": ""
 	},
 	{
-		"id": "3",
+		"id": 3,
 		"companyName": "(주) 슈퍼솔루션",
 		"representative": "김성현",
 		"address": "서울시 금천구 벚꽃로 244, 1107호~1109호, 707호(가산동, 벽산디지털밸리5차)",
@@ -33,7 +33,7 @@
 		"phone": ""
 	},
 	{
-		"id": "4",
+		"id": 4,
 		"companyName": "(주) 와이즈팍스",
 		"representative": "최석암",
 		"address": "경기도 고양시 일산서구 강성로 271(대화동, 대화씨티빌620호)",
@@ -44,7 +44,7 @@
 		"phone": ""
 	},
 	{
-		"id": "5",
+		"id": 5,
 		"companyName": "(주) 우진코니티",
 		"representative": "김용범",
 		"address": "서울특별시 강서구 마곡중앙6로 63, 6층 698호",
@@ -55,7 +55,7 @@
 		"phone": ""
 	},
 	{
-		"id": "6",
+		"id": 6,
 		"companyName": "(주) 트리아드",
 		"representative": "이여민",
 		"address": "서울 강남구 도산대로81길 19(청담동, 트리아드빌딩)",
@@ -66,7 +66,7 @@
 		"phone": ""
 	},
 	{
-		"id": "7",
+		"id": 7,
 		"companyName": "(주) 프린팅하우스",
 		"representative": "나성달",
 		"address": "서울 성동구 성수동2가 2696 외 3 필지 1층",
@@ -77,7 +77,7 @@
 		"phone": ""
 	},
 	{
-		"id": "8",
+		"id": 8,
 		"companyName": "(주)갭프로세스",
 		"representative": "김태형",
 		"address": "서울특별시 중구 수표로 4213(저동2가)",
@@ -88,7 +88,7 @@
 		"phone": ""
 	},
 	{
-		"id": "9",
+		"id": 9,
 		"companyName": "(주)글래드펌",
 		"representative": "이수문",
 		"address": "경기도 고양시 덕양구 통일로 140, B동 4층 414호(동산동, 삼송테크노밸리 B동 413호 414호)",
@@ -99,7 +99,7 @@
 		"phone": ""
 	},
 	{
-		"id": "10",
+		"id": 10,
 		"companyName": "(주)기술모아",
 		"representative": "박건영",
 		"address": "서울시 금천구 가산디지털1로 168(가산동, 우림라이온스밸리 에이동 117호)",
@@ -110,7 +110,7 @@
 		"phone": ""
 	},
 	{
-		"id": "11",
+		"id": 11,
 		"companyName": "(주)대동애드피아",
 		"representative": "권세훈, 신우식",
 		"address": "대전광역시 동구 우암로50번길 51(삼성동)",
@@ -121,7 +121,7 @@
 		"phone": ""
 	},
 	{
-		"id": "12",
+		"id": 12,
 		"companyName": "(주)대영문화",
 		"representative": "김대섭",
 		"address": "서울시 중구 퇴계로28길 8, 401호(남학동,만수빌딩)",
@@ -132,7 +132,7 @@
 		"phone": ""
 	},
 	{
-		"id": "13",
+		"id": 13,
 		"companyName": "(주)동양잉크",
 		"representative": "최대광",
 		"address": "경기도 평택시 진위면 가곡4길 94",
@@ -143,7 +143,7 @@
 		"phone": ""
 	},
 	{
-		"id": "14",
+		"id": 14,
 		"companyName": "(주)동양잉크 동부",
 		"representative": "최대광",
 		"address": "서울특별시 성동구 성수동2가 289284",
@@ -154,7 +154,7 @@
 		"phone": ""
 	},
 	{
-		"id": "15",
+		"id": 15,
 		"companyName": "(주)블루피앤아이",
 		"representative": "이균",
 		"address": "서울 마포구 서교동 47812 홍익제일빌딩2층 201",
@@ -165,7 +165,7 @@
 		"phone": ""
 	},
 	{
-		"id": "16",
+		"id": 16,
 		"companyName": "(주)삼진프린테크",
 		"representative": "정수양",
 		"address": "서울 중구 저동2가 843 창강빌딩1층",
@@ -176,7 +176,7 @@
 		"phone": ""
 	},
 	{
-		"id": "17",
+		"id": 17,
 		"companyName": "(주)서울기획인쇄",
 		"representative": "김규성",
 		"address": "서울시 중구 퇴계로36가길 86",
@@ -187,7 +187,7 @@
 		"phone": ""
 	},
 	{
-		"id": "18",
+		"id": 18,
 		"companyName": "(주)승지씨오엠",
 		"representative": "오승환",
 		"address": "서울 중구 퇴계로 1596 (충무로2가)",
@@ -198,7 +198,7 @@
 		"phone": ""
 	},
 	{
-		"id": "19",
+		"id": 19,
 		"companyName": "(주)신도리코",
 		"representative": "표희선",
 		"address": "서울 성동구 성수2가3동 27722",
@@ -209,7 +209,7 @@
 		"phone": ""
 	},
 	{
-		"id": "20",
+		"id": 20,
 		"companyName": "(주)신우인쇄",
 		"representative": "임병노",
 		"address": "경기도 고양시 일산서구 이산포길 290(법곳동)",
@@ -220,7 +220,7 @@
 		"phone": ""
 	},
 	{
-		"id": "21",
+		"id": 21,
 		"companyName": "(주)쌩큐컴퍼니",
 		"representative": "홍호기",
 		"address": "서울시 중구 충무로 505,203호(을지로3가,명성빌딩)",
@@ -231,7 +231,7 @@
 		"phone": ""
 	},
 	{
-		"id": "22",
+		"id": 22,
 		"companyName": "(주)씨앤씨",
 		"representative": "최상호",
 		"address": "서울시 용산구 한강로3가 40969 관광터미널",
@@ -240,7 +240,7 @@
 		"phone": ""
 	},
 	{
-		"id": "23",
+		"id": 23,
 		"companyName": "(주)씨앤씨현",
 		"representative": "류세현",
 		"address": "서울 구로구 구로동 JnK디지털타워 G203호",
@@ -251,7 +251,7 @@
 		"phone": ""
 	},
 	{
-		"id": "24",
+		"id": 24,
 		"companyName": "(주)아트팰리스",
 		"representative": "민현빈",
 		"address": "서울 중구 인현동2가 19230 신성상가 228",
@@ -262,7 +262,7 @@
 		"phone": ""
 	},
 	{
-		"id": "25",
+		"id": 25,
 		"companyName": "(주)에스앤아이시스템즈",
 		"representative": "김병환",
 		"address": "경기도 고양시 일산동구 호수로 35839",
@@ -273,7 +273,7 @@
 		"phone": ""
 	},
 	{
-		"id": "26",
+		"id": 26,
 		"companyName": "(주)엘컴기획인쇄",
 		"representative": "이종하",
 		"address": "서울 중구 오장동 904 코발트빌딩",
@@ -284,7 +284,7 @@
 		"phone": ""
 	},
 	{
-		"id": "27",
+		"id": 27,
 		"companyName": "(주)올인원테크",
 		"representative": "권혁준",
 		"address": "서울 용산구 한남동 604 동경빌딩1층",
@@ -295,7 +295,7 @@
 		"phone": ""
 	},
 	{
-		"id": "28",
+		"id": 28,
 		"companyName": "(주)우행 티엠에스",
 		"representative": "김택동",
 		"address": "서울시 성동구 아차산로 111(성수동2가)",
@@ -306,7 +306,7 @@
 		"phone": ""
 	},
 	{
-		"id": "29",
+		"id": 29,
 		"companyName": "(주)원에듀피앤씨",
 		"representative": "최부기",
 		"address": "서울 구로구 구로동 JnK디지털타워 G204호",
@@ -317,7 +317,7 @@
 		"phone": " 0220283137"
 	},
 	{
-		"id": "30",
+		"id": 30,
 		"companyName": "(주)유니포인트",
 		"representative": "안국필",
 		"address": "서울 마포구 상암동 1605 누리꿈스퀘어비즈니스 타워22층",
@@ -328,7 +328,7 @@
 		"phone": ""
 	},
 	{
-		"id": "31",
+		"id": 31,
 		"companyName": "(주)유신당",
 		"representative": "유정열",
 		"address": "대전광역시 동구 대전로 829(정동)",
@@ -339,7 +339,7 @@
 		"phone": ""
 	},
 	{
-		"id": "32",
+		"id": 32,
 		"companyName": "(주)일진문화",
 		"representative": "김진수",
 		"address": "서울시 중구 퇴계로49길 29(충무로5가)",
@@ -350,7 +350,7 @@
 		"phone": "0222695977"
 	},
 	{
-		"id": "33",
+		"id": 33,
 		"companyName": "(주)칼라원",
 		"representative": "정태호",
 		"address": "대구 중구 남산동 5816",
@@ -361,7 +361,7 @@
 		"phone": "01088553936"
 	},
 	{
-		"id": "34",
+		"id": 34,
 		"companyName": "(주)코델씨스템즈",
 		"representative": "신승도",
 		"address": "서울특별시 강남구 논현동 422 현우빌딩3층 302",
@@ -372,7 +372,7 @@
 		"phone": ""
 	},
 	{
-		"id": "35",
+		"id": 35,
 		"companyName": "(주)태웅인쇄사",
 		"representative": "허남례, 김종성",
 		"address": "서울시 용산구 효창원로 270(서계동)",
@@ -383,7 +383,7 @@
 		"phone": ""
 	},
 	{
-		"id": "36",
+		"id": 36,
 		"companyName": "(주)휴먼그래픽스",
 		"representative": "김태복",
 		"address": "서울시 영등포그 경인로82길 34,4층 420호(문래동1가,센터플러스)",
@@ -394,7 +394,7 @@
 		"phone": ""
 	},
 	{
-		"id": "37",
+		"id": 37,
 		"companyName": "C&F",
 		"representative": "김영명",
 		"address": "서울 용산구 한강로2가 선인상가 22동 3043호",
@@ -405,7 +405,7 @@
 		"phone": ""
 	},
 	{
-		"id": "38",
+		"id": 38,
 		"companyName": "CHEIL C&P",
 		"representative": "박종배",
 		"address": "서울시 중구 충무로5가 822 제1층",
@@ -416,7 +416,7 @@
 		"phone": ""
 	},
 	{
-		"id": "39",
+		"id": 39,
 		"companyName": "CMS",
 		"representative": "연지헌",
 		"address": "서울 중구 초동 1926",
@@ -427,7 +427,7 @@
 		"phone": ""
 	},
 	{
-		"id": "40",
+		"id": 40,
 		"companyName": "DIC",
 		"representative": "조영화",
 		"address": "서울 중구 충무로4가 28 2F",
@@ -438,14 +438,14 @@
 		"phone": ""
 	},
 	{
-		"id": "41",
+		"id": 41,
 		"companyName": "GAP실장님",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "42",
+		"id": 42,
 		"companyName": "H&J International",
 		"representative": "전우진",
 		"address": "서울 중구 예장동 9 삼익아파트지하2층B2091",
@@ -456,7 +456,7 @@
 		"phone": "07044014597"
 	},
 	{
-		"id": "43",
+		"id": 43,
 		"companyName": "IMPACT",
 		"representative": "임현수",
 		"address": "서울 중구 충무로4가 421 일진빌딩 3층 314",
@@ -467,7 +467,7 @@
 		"phone": ""
 	},
 	{
-		"id": "44",
+		"id": 44,
 		"companyName": "NETIS",
 		"representative": "조완준",
 		"addressDetail": "",
@@ -475,7 +475,7 @@
 		"phone": ""
 	},
 	{
-		"id": "45",
+		"id": 45,
 		"companyName": "SD글로벌",
 		"representative": "문수진",
 		"address": "서울시 중구 초동 1568번지 민성빌딩4층",
@@ -486,7 +486,7 @@
 		"phone": ""
 	},
 	{
-		"id": "46",
+		"id": 46,
 		"companyName": "가현기획",
 		"representative": "손지은",
 		"address": "경기 안양시 동안구 벌말로 126, 1001,1002호(관양동,평촌오비즈타워)",
@@ -497,28 +497,28 @@
 		"phone": ""
 	},
 	{
-		"id": "47",
+		"id": 47,
 		"companyName": "개인",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "48",
+		"id": 48,
 		"companyName": "개인매입",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "49",
+		"id": 49,
 		"companyName": "개인판매",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "50",
+		"id": 50,
 		"companyName": "갭",
 		"representative": "김태형",
 		"address": "서울시 중구 수표로6길 23(충무로3가)",
@@ -529,7 +529,7 @@
 		"phone": " 0222650136"
 	},
 	{
-		"id": "51",
+		"id": 51,
 		"companyName": "경일프린팅",
 		"representative": "신광순",
 		"address": "서울특별시 중구 수표로 4213(저동2가,1층일부)",
@@ -540,7 +540,7 @@
 		"phone": ""
 	},
 	{
-		"id": "52",
+		"id": 52,
 		"companyName": "경지피앤씨",
 		"representative": "한원석",
 		"address": "서울특별시 성동구 광나루로 241 (송정동)",
@@ -551,7 +551,7 @@
 		"phone": ""
 	},
 	{
-		"id": "53",
+		"id": 53,
 		"companyName": "고려신용정보(주)강북",
 		"representative": "박종진,윤태훈",
 		"address": "서울 노원구 공릉동 57625 동흥빌딩 2층",
@@ -562,7 +562,7 @@
 		"phone": ""
 	},
 	{
-		"id": "54",
+		"id": 54,
 		"companyName": "광림 입,출력센터",
 		"representative": "김동식",
 		"address": "서울특별시 중구 수표로12길(초동,덕양빌딩302A호실)",
@@ -573,7 +573,7 @@
 		"phone": ""
 	},
 	{
-		"id": "55",
+		"id": 55,
 		"companyName": "국일특수인쇄주식회사",
 		"representative": "권오국",
 		"address": "서울시 중구 창경궁로 16(예관동,국일빌딩)",
@@ -584,7 +584,7 @@
 		"phone": "0222729493"
 	},
 	{
-		"id": "56",
+		"id": 56,
 		"companyName": "국제원색",
 		"representative": "신준",
 		"address": "서울 중구 충무로 2113(충무로3가,국제빌딩3층)",
@@ -595,7 +595,7 @@
 		"phone": ""
 	},
 	{
-		"id": "57",
+		"id": 57,
 		"companyName": "국제원색",
 		"representative": "신동원",
 		"address": "서울 중구 을지로3가 2301",
@@ -606,7 +606,7 @@
 		"phone": ""
 	},
 	{
-		"id": "58",
+		"id": 58,
 		"companyName": "글로벌프린팅",
 		"representative": "김영곤",
 		"address": "서울 중구 저동2가 464 3층",
@@ -617,7 +617,7 @@
 		"phone": ""
 	},
 	{
-		"id": "59",
+		"id": 59,
 		"companyName": "금석문화인쇄사",
 		"representative": "김순팔",
 		"address": "서울특별시 중구 수표로12길 28(초동,2,3층)",
@@ -628,7 +628,7 @@
 		"phone": ""
 	},
 	{
-		"id": "60",
+		"id": 60,
 		"companyName": "금호크리에티브",
 		"representative": "윤지성",
 		"address": "서울 중구 충무로4가 121 일진빌딩 315",
@@ -639,21 +639,21 @@
 		"phone": ""
 	},
 	{
-		"id": "61",
+		"id": 61,
 		"companyName": "김정환",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "62",
+		"id": 62,
 		"companyName": "김포유신당",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "63",
+		"id": 63,
 		"companyName": "나온(디자인스튜디오)",
 		"representative": "최세영",
 		"address": "서울 중구 충무로5가 225 현대프레스타워 1009",
@@ -664,7 +664,7 @@
 		"phone": ""
 	},
 	{
-		"id": "64",
+		"id": 64,
 		"companyName": "남양 P&P",
 		"representative": "홍상현",
 		"address": "경기도 파주시 교하로 432(동패동,일부)",
@@ -675,7 +675,7 @@
 		"phone": ""
 	},
 	{
-		"id": "65",
+		"id": 65,
 		"companyName": "남양기획",
 		"representative": "홍광선",
 		"address": "경기 파주시 교하읍 문발리 5182",
@@ -686,7 +686,7 @@
 		"phone": ""
 	},
 	{
-		"id": "66",
+		"id": 66,
 		"companyName": "넥스원",
 		"representative": "김창호",
 		"address": "서울 중구 저동1가 283 이화빌딩 602",
@@ -697,7 +697,7 @@
 		"phone": ""
 	},
 	{
-		"id": "67",
+		"id": 67,
 		"companyName": "다오기획 주식회사",
 		"representative": "박형만",
 		"address": "경기도 파주시 소라지로 82, 1층(연다산동)",
@@ -708,7 +708,7 @@
 		"phone": ""
 	},
 	{
-		"id": "68",
+		"id": 68,
 		"companyName": "대림원색",
 		"representative": "이광원",
 		"address": "서울 중구 예장동 9 삼익아파트B2 205",
@@ -719,7 +719,7 @@
 		"phone": ""
 	},
 	{
-		"id": "69",
+		"id": 69,
 		"companyName": "대산문화사",
 		"representative": "김규호",
 		"address": "서울시 중구 창경궁로1길(충무로4가, 3층 302호일부)",
@@ -730,7 +730,7 @@
 		"phone": ""
 	},
 	{
-		"id": "70",
+		"id": 70,
 		"companyName": "대한문화",
 		"representative": "강완성",
 		"address": "서울특별시 중구 퇴계로51길 14(오장동)",
@@ -741,7 +741,7 @@
 		"phone": ""
 	},
 	{
-		"id": "71",
+		"id": 71,
 		"companyName": "대흥사",
 		"representative": "김인수",
 		"address": "대전광역시 동구 대전로815번길 84(삼성동)",
@@ -752,7 +752,7 @@
 		"phone": ""
 	},
 	{
-		"id": "72",
+		"id": 72,
 		"companyName": "대흥인쇄공사",
 		"representative": "박흥철",
 		"address": "서울 중구 오장동 9012",
@@ -763,14 +763,14 @@
 		"phone": ""
 	},
 	{
-		"id": "73",
+		"id": 73,
 		"companyName": "더프로세스",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "74",
+		"id": 74,
 		"companyName": "덕유문화미술사",
 		"representative": "주정훈",
 		"address": "서울 중구 예관동 245",
@@ -781,7 +781,7 @@
 		"phone": ""
 	},
 	{
-		"id": "75",
+		"id": 75,
 		"companyName": "동신인쇄",
 		"representative": "이명호",
 		"address": "서울 중구 충무로2가 4921",
@@ -792,7 +792,7 @@
 		"phone": ""
 	},
 	{
-		"id": "76",
+		"id": 76,
 		"companyName": "동진문화사",
 		"representative": "이병무",
 		"address": "서울 중구 을지로3가 10140 덕양빌딩 1",
@@ -803,7 +803,7 @@
 		"phone": ""
 	},
 	{
-		"id": "77",
+		"id": 77,
 		"companyName": "동진문화사",
 		"representative": "신범수",
 		"address": "서울 중구 초동 10615",
@@ -814,7 +814,7 @@
 		"phone": ""
 	},
 	{
-		"id": "78",
+		"id": 78,
 		"companyName": "동진문화인쇄사",
 		"representative": "정태성",
 		"address": "서울 중구 오장동 901",
@@ -825,7 +825,7 @@
 		"phone": ""
 	},
 	{
-		"id": "79",
+		"id": 79,
 		"companyName": "동천문화사",
 		"representative": "윤재영",
 		"address": "서울 중구 을지로4가 3021 광덕빌딜 602호",
@@ -836,7 +836,7 @@
 		"phone": ""
 	},
 	{
-		"id": "80",
+		"id": 80,
 		"companyName": "디자인 알",
 		"representative": "이광우",
 		"address": "서울 동작구 사당동 102033 302호",
@@ -847,7 +847,7 @@
 		"phone": ""
 	},
 	{
-		"id": "81",
+		"id": 81,
 		"companyName": "디자인PR",
 		"representative": "함미경",
 		"address": "서울 중구 인현동2가 1511 국일빌딩 604",
@@ -858,14 +858,14 @@
 		"phone": ""
 	},
 	{
-		"id": "82",
+		"id": 82,
 		"companyName": "레미지",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "83",
+		"id": 83,
 		"companyName": "롯데렌트(주)",
 		"representative": "표현명",
 		"address": "경기 안양시 동안구 전파로 88(호계동,신원비젼타워 8층)",
@@ -876,14 +876,14 @@
 		"phone": ""
 	},
 	{
-		"id": "84",
+		"id": 84,
 		"companyName": "리틀리더",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "85",
+		"id": 85,
 		"companyName": "링크포인트 (LINKpoint)",
 		"representative": "이근욱",
 		"address": "경기도 파주시 검산로 173번길 88(검산동)",
@@ -894,7 +894,7 @@
 		"phone": "01045617271"
 	},
 	{
-		"id": "86",
+		"id": 86,
 		"companyName": "마이컴디앤피",
 		"representative": "신송재",
 		"address": "서울 중구 필동3가 393 정문빌딩 3층",
@@ -905,7 +905,7 @@
 		"phone": ""
 	},
 	{
-		"id": "87",
+		"id": 87,
 		"companyName": "마이컴프린팅",
 		"representative": "이승용",
 		"address": "서울시 중구 서애로5길 1217, 206(필동3가)",
@@ -916,7 +916,7 @@
 		"phone": ""
 	},
 	{
-		"id": "88",
+		"id": 88,
 		"companyName": "명진기획",
 		"representative": "박용상",
 		"address": "서울특별시 용산구 한강대로104라길 3021(후암동)",
@@ -927,7 +927,7 @@
 		"phone": ""
 	},
 	{
-		"id": "89",
+		"id": 89,
 		"companyName": "명함천국",
 		"representative": "전성규",
 		"address": "서울시 중구 마른내로 65 (인현동2가, 3층)",
@@ -938,7 +938,7 @@
 		"phone": ""
 	},
 	{
-		"id": "90",
+		"id": 90,
 		"companyName": "모든CTP출력센터",
 		"representative": "김진숙",
 		"address": "대전광역시 동구 우암로50번길 5(삼성동)",
@@ -949,14 +949,14 @@
 		"phone": ""
 	},
 	{
-		"id": "91",
+		"id": 91,
 		"companyName": "문선기획",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": " 0222740193"
 	},
 	{
-		"id": "92",
+		"id": 92,
 		"companyName": "미디어출력",
 		"representative": "박정권",
 		"address": "서울 중구 오장동 1016 흥남빌딩 1층",
@@ -967,7 +967,7 @@
 		"phone": "0117809080"
 	},
 	{
-		"id": "93",
+		"id": 93,
 		"companyName": "미디어토탈",
 		"representative": "서정화",
 		"address": "서울 중구 오장동 1017 흥남빌딩 1,2층",
@@ -978,7 +978,7 @@
 		"phone": " 0222749755"
 	},
 	{
-		"id": "94",
+		"id": 94,
 		"companyName": "미루시스템",
 		"representative": "최성률",
 		"address": "서울특별시 영등포구 선유서로 15, 903(문래동3가,명지페르마타)",
@@ -989,14 +989,14 @@
 		"phone": ""
 	},
 	{
-		"id": "95",
+		"id": 95,
 		"companyName": "민기획",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "96",
+		"id": 96,
 		"companyName": "베스트젯",
 		"representative": "정성모",
 		"addressDetail": "",
@@ -1004,7 +1004,7 @@
 		"phone": ""
 	},
 	{
-		"id": "97",
+		"id": 97,
 		"companyName": "보리",
 		"representative": "김동균",
 		"addressDetail": "",
@@ -1012,7 +1012,7 @@
 		"phone": ""
 	},
 	{
-		"id": "98",
+		"id": 98,
 		"companyName": "사단법인 남북장애인교류협회",
 		"representative": "안광범,정원석",
 		"address": "서울 종로구 적선동 932 94",
@@ -1023,14 +1023,14 @@
 		"phone": "7256697"
 	},
 	{
-		"id": "99",
+		"id": 99,
 		"companyName": "사재호이사",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "100",
+		"id": 100,
 		"companyName": "삼보프로세스",
 		"representative": "기현도",
 		"address": "서울 중구 필동3가 2818 애드원빌딩3층",
@@ -1041,7 +1041,7 @@
 		"phone": ""
 	},
 	{
-		"id": "101",
+		"id": 101,
 		"companyName": "삼영그래픽스",
 		"representative": "백종대",
 		"address": "서울시 중구 을지로3가 29137",
@@ -1052,7 +1052,7 @@
 		"phone": ""
 	},
 	{
-		"id": "102",
+		"id": 102,
 		"companyName": "삼원씨티피",
 		"representative": "박성진",
 		"address": "서울 중구 을지로12길 22 (저동2가)2층",
@@ -1063,14 +1063,14 @@
 		"phone": ""
 	},
 	{
-		"id": "103",
+		"id": 103,
 		"companyName": "상상도깨비",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "104",
+		"id": 104,
 		"companyName": "새봄",
 		"representative": "라병태",
 		"address": "서울 중구 인현동1가 13319 2층",
@@ -1081,7 +1081,7 @@
 		"phone": ""
 	},
 	{
-		"id": "105",
+		"id": 105,
 		"companyName": "서강칼라",
 		"representative": "김부자",
 		"address": "경기도 파주시 광인사길 189(문발동)",
@@ -1092,7 +1092,7 @@
 		"phone": ""
 	},
 	{
-		"id": "106",
+		"id": 106,
 		"companyName": "서경문화사",
 		"representative": "이덕범",
 		"address": "서울특별시 중구 마른내로4길 21, 2층(인현동1가)",
@@ -1103,7 +1103,7 @@
 		"phone": ""
 	},
 	{
-		"id": "107",
+		"id": 107,
 		"companyName": "서봉호",
 		"representative": "서봉호",
 		"address": "서울 중구 충무로3가 585",
@@ -1114,7 +1114,7 @@
 		"phone": ""
 	},
 	{
-		"id": "108",
+		"id": 108,
 		"companyName": "서울공업고등학교",
 		"representative": "양한석",
 		"address": "서울특별시 동작구 대방동 3905",
@@ -1125,7 +1125,7 @@
 		"phone": ""
 	},
 	{
-		"id": "109",
+		"id": 109,
 		"companyName": "서울문화CTP(씨티피)",
 		"representative": "구본자",
 		"address": "서울시 중구 수표로10길 81 (저동2가,2층)",
@@ -1136,7 +1136,7 @@
 		"phone": ""
 	},
 	{
-		"id": "110",
+		"id": 110,
 		"companyName": "서울문화인쇄(주)",
 		"representative": "강영숙,강진식",
 		"address": "서울 중구 저동2가 476",
@@ -1147,7 +1147,7 @@
 		"phone": ""
 	},
 	{
-		"id": "111",
+		"id": 111,
 		"companyName": "선진문화사",
 		"representative": "김명철",
 		"address": "서울시 중구 마른내로10길 14(인현동2가)",
@@ -1158,7 +1158,7 @@
 		"phone": ""
 	},
 	{
-		"id": "112",
+		"id": 112,
 		"companyName": "선진상사",
 		"representative": "이동윤",
 		"address": "서울 중구 필동1가 36 서울빌딩 305",
@@ -1169,7 +1169,7 @@
 		"phone": " 0222753090"
 	},
 	{
-		"id": "113",
+		"id": 113,
 		"companyName": "성광그래픽스",
 		"representative": "김숙희",
 		"address": "경기도 김포시 양촌면 학운리 2979 메카존나동411호,412호",
@@ -1180,7 +1180,7 @@
 		"phone": "0319326625"
 	},
 	{
-		"id": "114",
+		"id": 114,
 		"companyName": "세계문화주식회사",
 		"representative": "송춘식",
 		"address": "서울시 중구 퇴계로36가길 10 (필동2가,세정아이티빌딩)",
@@ -1191,7 +1191,7 @@
 		"phone": ""
 	},
 	{
-		"id": "115",
+		"id": 115,
 		"companyName": "세정프린팅",
 		"representative": "김규성",
 		"address": "서울시 중구 퇴계로36가길 86(필동2가,302호3층)",
@@ -1202,7 +1202,7 @@
 		"phone": ""
 	},
 	{
-		"id": "116",
+		"id": 116,
 		"companyName": "세종CTP",
 		"representative": "김미영",
 		"address": "대전광역시 동구 선화로186번길 19(중동)",
@@ -1213,7 +1213,7 @@
 		"phone": ""
 	},
 	{
-		"id": "117",
+		"id": 117,
 		"companyName": "스마트CTP",
 		"representative": "김은자",
 		"address": "대전 동구 삼성동 27715",
@@ -1224,7 +1224,7 @@
 		"phone": ""
 	},
 	{
-		"id": "118",
+		"id": 118,
 		"companyName": "시조문화사",
 		"representative": "김시영",
 		"address": "서울 중구 을지로3가 2602",
@@ -1235,7 +1235,7 @@
 		"phone": ""
 	},
 	{
-		"id": "119",
+		"id": 119,
 		"companyName": "신영칼라",
 		"representative": "장동규",
 		"address": "서울 성동구 성수동2가 3171 백석빌딩3층",
@@ -1246,21 +1246,21 @@
 		"phone": ""
 	},
 	{
-		"id": "120",
+		"id": 120,
 		"companyName": "신용카드",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "121",
+		"id": 121,
 		"companyName": "아이디",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "122",
+		"id": 122,
 		"companyName": "아이컴넷",
 		"representative": "황덕준",
 		"addressDetail": "",
@@ -1268,7 +1268,7 @@
 		"phone": "0112521209"
 	},
 	{
-		"id": "123",
+		"id": 123,
 		"companyName": "아이피에이 프린테크",
 		"representative": "홍영기",
 		"address": "서울 중구 저동2가 843 창강빌딩 204",
@@ -1279,7 +1279,7 @@
 		"phone": ""
 	},
 	{
-		"id": "124",
+		"id": 124,
 		"companyName": "아트프라이스(주)",
 		"representative": "김영석",
 		"address": "서울 강남구 청담동 10016 4층",
@@ -1290,7 +1290,7 @@
 		"phone": ""
 	},
 	{
-		"id": "125",
+		"id": 125,
 		"companyName": "안성미디어",
 		"representative": "박태균",
 		"address": "서울시 중구 을지로14길 28(초동,3층)",
@@ -1301,7 +1301,7 @@
 		"phone": ""
 	},
 	{
-		"id": "126",
+		"id": 126,
 		"companyName": "안전리뷰",
 		"representative": "김정석",
 		"address": "서울 광진구 중곡동 6103 3층",
@@ -1312,7 +1312,7 @@
 		"phone": ""
 	},
 	{
-		"id": "127",
+		"id": 127,
 		"companyName": "알파프린팅",
 		"representative": "최신길",
 		"address": "서울 중구 충무로4가 150 동영빌딩1층",
@@ -1323,7 +1323,7 @@
 		"phone": ""
 	},
 	{
-		"id": "128",
+		"id": 128,
 		"companyName": "애드맥스커뮤니케이션",
 		"representative": "김희석",
 		"address": "서울 중구 을지로6가 457 배원빌딩 701",
@@ -1334,7 +1334,7 @@
 		"phone": ""
 	},
 	{
-		"id": "129",
+		"id": 129,
 		"companyName": "애드테크",
 		"representative": "고민호",
 		"address": "서울 중구 필동2가 43",
@@ -1345,7 +1345,7 @@
 		"phone": ""
 	},
 	{
-		"id": "130",
+		"id": 130,
 		"companyName": "에스디소프트",
 		"representative": "조성두",
 		"address": "서울 중구 필동3가 서울캐피탈빌딩 309호",
@@ -1356,7 +1356,7 @@
 		"phone": ""
 	},
 	{
-		"id": "131",
+		"id": 131,
 		"companyName": "에이디솔루션",
 		"representative": "박병철",
 		"address": "서울시 중구 충무로 505, 103(을지로3가, 명성빌딩)",
@@ -1367,7 +1367,7 @@
 		"phone": ""
 	},
 	{
-		"id": "132",
+		"id": 132,
 		"companyName": "에코프린트",
 		"representative": "박상기",
 		"address": "경기도 파주시 광탄면 용미리 6934 외1필지2층",
@@ -1378,7 +1378,7 @@
 		"phone": ""
 	},
 	{
-		"id": "133",
+		"id": 133,
 		"companyName": "엘앤에스컴",
 		"representative": "윤덕선",
 		"address": "서울특별시 중구 수표로12길 6(저동2가, 정인빌딩2층)",
@@ -1389,7 +1389,7 @@
 		"phone": ""
 	},
 	{
-		"id": "134",
+		"id": 134,
 		"companyName": "엠피솔루션",
 		"representative": "문진아",
 		"address": "서울시 금천구 가산디지털1로205,6층 607호(가산동,케이씨씨웰츠밸리)",
@@ -1400,7 +1400,7 @@
 		"phone": ""
 	},
 	{
-		"id": "135",
+		"id": 135,
 		"companyName": "엠피케이솔루션",
 		"representative": "김재경",
 		"address": "서울특별시 중구 퇴계로36나길 14",
@@ -1411,7 +1411,7 @@
 		"phone": ""
 	},
 	{
-		"id": "136",
+		"id": 136,
 		"companyName": "연이프린텍",
 		"representative": "김유길",
 		"address": "서울시 마포구 창전동 8938 1층, 지하1층",
@@ -1422,14 +1422,14 @@
 		"phone": ""
 	},
 	{
-		"id": "137",
+		"id": 137,
 		"companyName": "연지곤지어린이집",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "138",
+		"id": 138,
 		"companyName": "예림인쇄",
 		"representative": "박재성",
 		"address": "경기도 파주시 광탄면 용미리 6934 외 1필지",
@@ -1440,7 +1440,7 @@
 		"phone": ""
 	},
 	{
-		"id": "139",
+		"id": 139,
 		"companyName": "예민한 감성의 공격적 딸기나무",
 		"representative": "고은기",
 		"address": "서울 서대문구 연희동1864 거평빌라 402",
@@ -1451,14 +1451,14 @@
 		"phone": "01023927450"
 	},
 	{
-		"id": "140",
+		"id": 140,
 		"companyName": "오픈마켓",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "141",
+		"id": 141,
 		"companyName": "우일관세사무소",
 		"representative": "박용판",
 		"address": "인천 중구 운서동 2155",
@@ -1469,7 +1469,7 @@
 		"phone": ""
 	},
 	{
-		"id": "142",
+		"id": 142,
 		"companyName": "우일프린테크",
 		"representative": "이성범",
 		"address": "경기도 고양시 일산동구 장대길 42143(장항동)",
@@ -1480,7 +1480,7 @@
 		"phone": ""
 	},
 	{
-		"id": "143",
+		"id": 143,
 		"companyName": "우진 협동조합",
 		"representative": "김정환",
 		"address": "대전광역시 동구 대전로 8499(정동) 2층",
@@ -1491,7 +1491,7 @@
 		"phone": ""
 	},
 	{
-		"id": "144",
+		"id": 144,
 		"companyName": "웅보",
 		"address": "서울 마포구 성산동",
 		"addressDetail": "",
@@ -1499,7 +1499,7 @@
 		"phone": ""
 	},
 	{
-		"id": "145",
+		"id": 145,
 		"companyName": "유그래픽스",
 		"representative": "민덕현",
 		"address": "서울시 중구 충무로2길 26 (충무로4가, 2층203호)",
@@ -1510,7 +1510,7 @@
 		"phone": ""
 	},
 	{
-		"id": "146",
+		"id": 146,
 		"companyName": "유봉실업주식회사",
 		"representative": "유상일",
 		"address": "경기도 남양주시 진건읍 진관산단로59번길 2 (1층,2층)",
@@ -1521,7 +1521,7 @@
 		"phone": ""
 	},
 	{
-		"id": "147",
+		"id": 147,
 		"companyName": "유신당씨앤씨(주)",
 		"representative": "유정열",
 		"address": "경기 김포시 양촌면 학운리 2706",
@@ -1532,7 +1532,7 @@
 		"phone": ""
 	},
 	{
-		"id": "148",
+		"id": 148,
 		"companyName": "유영기획",
 		"address": "을지로 구 전화국 뒷편",
 		"addressDetail": "",
@@ -1540,7 +1540,7 @@
 		"phone": ""
 	},
 	{
-		"id": "149",
+		"id": 149,
 		"companyName": "유진테크",
 		"representative": "원종선",
 		"address": "서울 중구 충무로2가 484",
@@ -1551,7 +1551,7 @@
 		"phone": ""
 	},
 	{
-		"id": "150",
+		"id": 150,
 		"companyName": "유한사",
 		"representative": "이해수",
 		"address": "서울시 중구 을지로2가 10144",
@@ -1562,14 +1562,14 @@
 		"phone": ""
 	},
 	{
-		"id": "151",
+		"id": 151,
 		"companyName": "이능모",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "152",
+		"id": 152,
 		"companyName": "이종문",
 		"representative": "이종문",
 		"addressDetail": "",
@@ -1577,14 +1577,14 @@
 		"phone": ""
 	},
 	{
-		"id": "153",
+		"id": 153,
 		"companyName": "이지미술",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "154",
+		"id": 154,
 		"companyName": "인베이션 (INVAITION)",
 		"representative": "이홍연",
 		"address": "서울 성동구 성수동2가 28467 창미빌딩 301호",
@@ -1595,7 +1595,7 @@
 		"phone": ""
 	},
 	{
-		"id": "155",
+		"id": 155,
 		"companyName": "인성Trade",
 		"representative": "전재명",
 		"address": "서울특별시 중구 충무로29, 지하3층 B304호(초동, 아시아미디어타워)",
@@ -1606,7 +1606,7 @@
 		"phone": ""
 	},
 	{
-		"id": "156",
+		"id": 156,
 		"companyName": "인천공항세관장",
 		"address": "인천 중구 운서동 인천국제공항세관",
 		"addressDetail": "",
@@ -1614,7 +1614,7 @@
 		"phone": ""
 	},
 	{
-		"id": "157",
+		"id": 157,
 		"companyName": "일우씨엔에스 주식회사",
 		"representative": "곽혁진",
 		"address": "경기도 고양시 덕양구 통일로 140, A동101호(동산동, 삼송테크로밸리)",
@@ -1625,7 +1625,7 @@
 		"phone": ""
 	},
 	{
-		"id": "158",
+		"id": 158,
 		"companyName": "일진기획인쇄",
 		"representative": "김석현",
 		"address": "서울특별시 중구 퇴계로49길 27(충무로5가)",
@@ -1636,7 +1636,7 @@
 		"phone": "0222695977"
 	},
 	{
-		"id": "159",
+		"id": 159,
 		"companyName": "정동CTP",
 		"representative": "박춘희",
 		"address": "대전광역시 동구 중동 812",
@@ -1647,7 +1647,7 @@
 		"phone": ""
 	},
 	{
-		"id": "160",
+		"id": 160,
 		"companyName": "정명진",
 		"representative": "정명진",
 		"addressDetail": "",
@@ -1655,7 +1655,7 @@
 		"phone": ""
 	},
 	{
-		"id": "161",
+		"id": 161,
 		"companyName": "제스트커뮤니케이션",
 		"representative": "박순하",
 		"address": "서울 중구 을지로5가 201 정건벨라지오 901",
@@ -1666,7 +1666,7 @@
 		"phone": "019 5311624"
 	},
 	{
-		"id": "162",
+		"id": 162,
 		"companyName": "제이에스테크(JS tech)",
 		"representative": "정효진",
 		"address": "서울특별시 중구 장충단로7길 421,1층(쌍림동)",
@@ -1677,7 +1677,7 @@
 		"phone": ""
 	},
 	{
-		"id": "163",
+		"id": 163,
 		"companyName": "제이투에스",
 		"representative": "이종문",
 		"address": "서울 중구 저동2가 843 창강빌딩 204호",
@@ -1688,7 +1688,7 @@
 		"phone": ""
 	},
 	{
-		"id": "164",
+		"id": 164,
 		"companyName": "젠북",
 		"representative": "최성훈",
 		"addressDetail": "",
@@ -1696,14 +1696,14 @@
 		"phone": ""
 	},
 	{
-		"id": "165",
+		"id": 165,
 		"companyName": "좋은책만들기",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "166",
+		"id": 166,
 		"companyName": "주간인쇄정보",
 		"representative": "강춘범",
 		"address": "서울 중구 초동 1074",
@@ -1714,7 +1714,7 @@
 		"phone": ""
 	},
 	{
-		"id": "167",
+		"id": 167,
 		"companyName": "주식회사 경지",
 		"representative": "한원석",
 		"address": "서울특별시 성동구 광나루로 241, 2층(송정동)",
@@ -1725,7 +1725,7 @@
 		"phone": ""
 	},
 	{
-		"id": "168",
+		"id": 168,
 		"companyName": "주식회사 글로벌엠에프지",
 		"representative": "신동길",
 		"address": "서울 금천구 가산동 3565",
@@ -1736,7 +1736,7 @@
 		"phone": ""
 	},
 	{
-		"id": "169",
+		"id": 169,
 		"companyName": "주식회사 금석인쇄그룹",
 		"representative": "김순팔",
 		"address": "서울시 중구 을지로12길 5, 1층 102호(을지로3가, 동화빌딩)",
@@ -1747,7 +1747,7 @@
 		"phone": ""
 	},
 	{
-		"id": "170",
+		"id": 170,
 		"companyName": "주식회사 나눔프린팅",
 		"representative": "이덕재",
 		"address": "서울시 중구 수표로 225, 1층(저동2가)",
@@ -1758,7 +1758,7 @@
 		"phone": ""
 	},
 	{
-		"id": "171",
+		"id": 171,
 		"companyName": "주식회사 미스터즈",
 		"representative": "이상목",
 		"address": "서울시 중구 충무로15, 지하1동(충무로3가, Tmark Hotel 명동)",
@@ -1769,7 +1769,7 @@
 		"phone": ""
 	},
 	{
-		"id": "172",
+		"id": 172,
 		"companyName": "주식회사 보리디앤엠",
 		"representative": "김동균",
 		"address": "서울 중구 필동2가 1191 은덕빌딩3층",
@@ -1780,7 +1780,7 @@
 		"phone": ""
 	},
 	{
-		"id": "173",
+		"id": 173,
 		"companyName": "주식회사 삼보프로세스",
 		"representative": "기현도",
 		"address": "서울특별시 중구 퇴계로37길 265(충무로4가)",
@@ -1791,7 +1791,7 @@
 		"phone": ""
 	},
 	{
-		"id": "174",
+		"id": 174,
 		"companyName": "주식회사 삼일기획",
 		"representative": "박동숙",
 		"address": "세종특별자치시 보듬8로 45(도담동, 삼일기획빌딩)",
@@ -1802,7 +1802,7 @@
 		"phone": ""
 	},
 	{
-		"id": "175",
+		"id": 175,
 		"companyName": "주식회사 씨에스아이프로",
 		"representative": "김동일",
 		"address": "서울 중구 서애로 21, 4층(필동3가, 필동빌딩)",
@@ -1813,7 +1813,7 @@
 		"phone": ""
 	},
 	{
-		"id": "176",
+		"id": 176,
 		"companyName": "주식회사 씨엠와이피앤피",
 		"representative": "문경선",
 		"address": "경기도 파주시 문발로 119, 101(문발동,모퉁이돌)",
@@ -1824,7 +1824,7 @@
 		"phone": ""
 	},
 	{
-		"id": "177",
+		"id": 177,
 		"companyName": "주식회사 오로라테크",
 		"representative": "김경식",
 		"address": "서울특별시 영등포구 문래북로 116, 603호(문래동3가, 트리플렉스)",
@@ -1835,7 +1835,7 @@
 		"phone": ""
 	},
 	{
-		"id": "178",
+		"id": 178,
 		"companyName": "주식회사 이엠데이타",
 		"representative": "하경열",
 		"address": "서울시 용산구 원효로 128, 610(원효로3가, 이테크밸리)",
@@ -1846,7 +1846,7 @@
 		"phone": ""
 	},
 	{
-		"id": "179",
+		"id": 179,
 		"companyName": "주식회사 인성데이타",
 		"representative": "전재명",
 		"address": "서울시 성북구 북악산로 844,109동 903호(돈암동, 브라운스톤돈암아파트)",
@@ -1857,7 +1857,7 @@
 		"phone": ""
 	},
 	{
-		"id": "180",
+		"id": 180,
 		"companyName": "주식회사 큐프린트",
 		"representative": "김연규",
 		"address": "서울 중구 충무로3가 598 예림빌딩504호",
@@ -1868,7 +1868,7 @@
 		"phone": ""
 	},
 	{
-		"id": "181",
+		"id": 181,
 		"companyName": "주식회사 태원디앤피",
 		"representative": "남정혁",
 		"address": "서울특별시 중구 수표로 4213, 1층(저동2가)",
@@ -1879,7 +1879,7 @@
 		"phone": ""
 	},
 	{
-		"id": "182",
+		"id": 182,
 		"companyName": "주식회사 파운더코리아",
 		"representative": "김범수",
 		"address": "서울시 영등포구 양평로21길 26, 2305(선유도역1차아이에스비즈타워)",
@@ -1890,7 +1890,7 @@
 		"phone": ""
 	},
 	{
-		"id": "183",
+		"id": 183,
 		"companyName": "주식회사 프린트시티",
 		"representative": "천호규, 홍재창",
 		"address": "서울 중구 을지로18길 31(인현동1가, 프린트시티인쇄센타)",
@@ -1901,7 +1901,7 @@
 		"phone": ""
 	},
 	{
-		"id": "184",
+		"id": 184,
 		"companyName": "주식회사 한솔인쇄",
 		"representative": "이수경",
 		"address": "서울 중구 필동1가 111",
@@ -1912,7 +1912,7 @@
 		"phone": ""
 	},
 	{
-		"id": "185",
+		"id": 185,
 		"companyName": "주식회사 해내리",
 		"representative": "송영덕",
 		"address": "서울시 성동구 상원12길 36(성수동1가, 1,2,3층)",
@@ -1923,7 +1923,7 @@
 		"phone": ""
 	},
 	{
-		"id": "186",
+		"id": 186,
 		"companyName": "주식회사 후너스",
 		"representative": "이영훈,오영신",
 		"address": "경기 성남시 분당구 수내동 222",
@@ -1934,14 +1934,14 @@
 		"phone": ""
 	},
 	{
-		"id": "187",
+		"id": 187,
 		"companyName": "중앙아트",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "188",
+		"id": 188,
 		"companyName": "중앙칼라",
 		"representative": "김태복",
 		"address": "서울 중구 인현동1가",
@@ -1952,7 +1952,7 @@
 		"phone": ""
 	},
 	{
-		"id": "189",
+		"id": 189,
 		"companyName": "지메이드",
 		"representative": "최외숙",
 		"address": "서울 중구 충무로2가 501",
@@ -1963,7 +1963,7 @@
 		"phone": ""
 	},
 	{
-		"id": "190",
+		"id": 190,
 		"companyName": "지엔비카렌다 (주)",
 		"representative": "채미정",
 		"address": "경기도 고양시 덕양구 통일로 140, B동 346호(동산동, 삼송테크노벨리)",
@@ -1974,7 +1974,7 @@
 		"phone": ""
 	},
 	{
-		"id": "191",
+		"id": 191,
 		"companyName": "지엔비프린팅",
 		"representative": "박정욱",
 		"address": "경기도 고향시 덕양구 통일로 140,A동 113호(동산동, 삼송테크노밸리)",
@@ -1985,7 +1985,7 @@
 		"phone": ""
 	},
 	{
-		"id": "192",
+		"id": 192,
 		"companyName": "진성사",
 		"representative": "구춘식",
 		"address": "경기 안산시 목내 4751",
@@ -1996,7 +1996,7 @@
 		"phone": ""
 	},
 	{
-		"id": "193",
+		"id": 193,
 		"companyName": "찬보인쇄사",
 		"representative": "박송희",
 		"address": "서울특별시 중구 마른내로12길 177, 1층(충무로5가)",
@@ -2007,7 +2007,7 @@
 		"phone": ""
 	},
 	{
-		"id": "194",
+		"id": 194,
 		"companyName": "창영프로세스(주)",
 		"representative": "김창회",
 		"address": "서울 중구 인현동1가 1091",
@@ -2018,14 +2018,14 @@
 		"phone": ""
 	},
 	{
-		"id": "195",
+		"id": 195,
 		"companyName": "최진원",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "196",
+		"id": 196,
 		"companyName": "쵸이스LOVE",
 		"representative": "최현웅",
 		"address": "서울시 중구 충무로4가 121 일진빌딩2031호",
@@ -2036,7 +2036,7 @@
 		"phone": ""
 	},
 	{
-		"id": "197",
+		"id": 197,
 		"companyName": "코델시스템즈",
 		"representative": "신승도",
 		"addressDetail": "",
@@ -2044,7 +2044,7 @@
 		"phone": ""
 	},
 	{
-		"id": "198",
+		"id": 198,
 		"companyName": "코리아월드",
 		"representative": "조상철",
 		"address": "서울 중구 충무로4가 1491 3층",
@@ -2055,7 +2055,7 @@
 		"phone": ""
 	},
 	{
-		"id": "199",
+		"id": 199,
 		"companyName": "코어인",
 		"representative": "김동섭",
 		"address": "서울특별시 중구 을지로 1261, 202(을지로3가, 2층)",
@@ -2066,7 +2066,7 @@
 		"phone": ""
 	},
 	{
-		"id": "200",
+		"id": 200,
 		"companyName": "탑프린팅",
 		"representative": "김용민",
 		"address": "서울 중구 을지로3가 31615",
@@ -2077,7 +2077,7 @@
 		"phone": ""
 	},
 	{
-		"id": "201",
+		"id": 201,
 		"companyName": "탑플러스",
 		"representative": "이광수",
 		"address": "서울 중구 저동2가 4612 3층",
@@ -2088,7 +2088,7 @@
 		"phone": ""
 	},
 	{
-		"id": "202",
+		"id": 202,
 		"companyName": "태산",
 		"representative": "김종혁",
 		"address": "서울 중구 인현동2가 100 복형B/D 3~4층",
@@ -2097,7 +2097,7 @@
 		"phone": ""
 	},
 	{
-		"id": "203",
+		"id": 203,
 		"companyName": "태영안전(주)",
 		"representative": "김영석",
 		"address": "서울 광진구 중곡동 6103 태영빌딩 1층",
@@ -2108,14 +2108,14 @@
 		"phone": ""
 	},
 	{
-		"id": "204",
+		"id": 204,
 		"companyName": "토이다",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "205",
+		"id": 205,
 		"companyName": "토탈컴텍(주)",
 		"representative": "김창용,박성원",
 		"address": "서울 중구 필동2가 1106",
@@ -2126,7 +2126,7 @@
 		"phone": ""
 	},
 	{
-		"id": "206",
+		"id": 206,
 		"companyName": "토탈프로세스",
 		"representative": "김연순",
 		"address": "서울 용산구 서계동 2601",
@@ -2137,7 +2137,7 @@
 		"phone": ""
 	},
 	{
-		"id": "207",
+		"id": 207,
 		"companyName": "파운더솔루션",
 		"representative": "조완준",
 		"address": "서울 중구 충무로3가 596 충안빌딩2층",
@@ -2148,7 +2148,7 @@
 		"phone": ""
 	},
 	{
-		"id": "208",
+		"id": 208,
 		"companyName": "팬텀프로세스",
 		"representative": "안기범",
 		"address": "서울 중구 필동3가 15 문화빌딩2층 205",
@@ -2159,7 +2159,7 @@
 		"phone": ""
 	},
 	{
-		"id": "209",
+		"id": 209,
 		"companyName": "펜타이드",
 		"representative": "윤채혁",
 		"address": "서울시 중구 필동로 14(필동2가, 대평빌딩505호)",
@@ -2170,7 +2170,7 @@
 		"phone": ""
 	},
 	{
-		"id": "210",
+		"id": 210,
 		"companyName": "포시즌",
 		"representative": "엄오섭",
 		"addressDetail": "",
@@ -2178,7 +2178,7 @@
 		"phone": ""
 	},
 	{
-		"id": "211",
+		"id": 211,
 		"companyName": "포유",
 		"representative": "김명심",
 		"address": "서숭시 동대문구 장한로91, 18층 비1815호(장안동, 현대썬앤빌 601)",
@@ -2189,7 +2189,7 @@
 		"phone": ""
 	},
 	{
-		"id": "212",
+		"id": 212,
 		"companyName": "포유피앤피",
 		"representative": "김석진",
 		"address": "서울시 중구 충무로 29, 201호(초동, 아시아미디어타워)",
@@ -2200,7 +2200,7 @@
 		"phone": ""
 	},
 	{
-		"id": "213",
+		"id": 213,
 		"companyName": "한국브리태니커회사",
 		"representative": "전길홍",
 		"address": "서울 중구 장충동1가 117",
@@ -2211,14 +2211,14 @@
 		"phone": " 0222754983"
 	},
 	{
-		"id": "214",
+		"id": 214,
 		"companyName": "한양티엔에스",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "215",
+		"id": 215,
 		"companyName": "한울기획",
 		"representative": "성정용",
 		"address": "서울 강남구 역삼동 7079",
@@ -2229,7 +2229,7 @@
 		"phone": ""
 	},
 	{
-		"id": "216",
+		"id": 216,
 		"companyName": "형제아트(주)",
 		"representative": "윤병업",
 		"address": "서울시 중구 수표로10길 29,지층, 3층(초동, 윤빌딩)",
@@ -2240,7 +2240,7 @@
 		"phone": ""
 	},
 	{
-		"id": "217",
+		"id": 217,
 		"companyName": "호성흥업(주)",
 		"representative": "정승백",
 		"address": "서울시 중구 삼일대로4길 9 (충무로2가 509) 라이온스빌딩",
@@ -2251,7 +2251,7 @@
 		"phone": ""
 	},
 	{
-		"id": "218",
+		"id": 218,
 		"companyName": "화이트",
 		"representative": "박동기",
 		"address": "서울특별시 중구 퇴계로37길 25(충무로3가)",
@@ -2262,7 +2262,7 @@
 		"phone": ""
 	},
 	{
-		"id": "219",
+		"id": 219,
 		"companyName": "휴먼에스피",
 		"representative": "조성철",
 		"address": "서울 용산구 신계동 4322 제신상가 5104",
@@ -2273,7 +2273,7 @@
 		"phone": ""
 	},
 	{
-		"id": "220",
+		"id": 220,
 		"companyName": "히스토리",
 		"representative": "양승호",
 		"address": "서울 용산구 한강로2가 1513 나진상가 19동 라열 208호",
@@ -2284,7 +2284,7 @@
 		"phone": ""
 	},
 	{
-		"id": "221",
+		"id": 221,
 		"companyName": "(재)국제농업개발원",
 		"representative": "이병화",
 		"address": "서울시 송파구 가락 600",
@@ -2295,7 +2295,7 @@
 		"phone": ""
 	},
 	{
-		"id": "222",
+		"id": 222,
 		"companyName": "(주)국제프린트",
 		"representative": "안용한",
 		"address": "대전광역시 동구 대전로867번길 36,1층(삼성동)",
@@ -2306,7 +2306,7 @@
 		"phone": ""
 	},
 	{
-		"id": "223",
+		"id": 223,
 		"companyName": "(주)도서출판한국헤르만헤세",
 		"representative": "박인환",
 		"address": "서울 송파구 석촌동 73 대호빌딩 502",
@@ -2317,7 +2317,7 @@
 		"phone": ""
 	},
 	{
-		"id": "224",
+		"id": 224,
 		"companyName": "(주)동우인쇄",
 		"representative": "최상근,안성환",
 		"address": "서울 중구 퇴계로 23237,1층(충무로5가)",
@@ -2328,7 +2328,7 @@
 		"phone": ""
 	},
 	{
-		"id": "225",
+		"id": 225,
 		"companyName": "(주)디지털뱅크",
 		"representative": "정희갑",
 		"address": "경기도 고양시 일산동구 장대길 4276, 다동(장항동)",
@@ -2339,7 +2339,7 @@
 		"phone": ""
 	},
 	{
-		"id": "226",
+		"id": 226,
 		"companyName": "(주)블루엔",
 		"representative": "송호준",
 		"address": "경기도 파주시 문발로 21434(문발동,5111)",
@@ -2350,7 +2350,7 @@
 		"phone": ""
 	},
 	{
-		"id": "227",
+		"id": 227,
 		"companyName": "(주)비욘드테크",
 		"representative": "박건영",
 		"address": "서울시 금천구 가산동 165 가산비지니스센터 301호~305호",
@@ -2361,7 +2361,7 @@
 		"phone": ""
 	},
 	{
-		"id": "228",
+		"id": 228,
 		"companyName": "(주)성신 프린팅",
 		"representative": "홍순제,이분순",
 		"address": "서울 영등포구 양평로28가길 6(양평동6가)",
@@ -2372,7 +2372,7 @@
 		"phone": ""
 	},
 	{
-		"id": "229",
+		"id": 229,
 		"companyName": "(주)스마트파팅엘크루메트로시티주차",
 		"representative": "장진우",
 		"address": "서울특별시 중구 충무로3가 49번지",
@@ -2383,7 +2383,7 @@
 		"phone": ""
 	},
 	{
-		"id": "230",
+		"id": 230,
 		"companyName": "(주)신영씨앤피",
 		"representative": "박태일",
 		"address": "서울 중구 충무로7길 13(을지로3가)",
@@ -2394,7 +2394,7 @@
 		"phone": ""
 	},
 	{
-		"id": "231",
+		"id": 231,
 		"companyName": "(주)신화프린팅코아퍼레이션",
 		"representative": "김영묵",
 		"address": "경기도 고양일산동구 장항동 57912",
@@ -2405,7 +2405,7 @@
 		"phone": ""
 	},
 	{
-		"id": "232",
+		"id": 232,
 		"companyName": "(주)에이제이금속",
 		"representative": "윤지선",
 		"address": "경기도 파주시 파주읍 정문로 58924",
@@ -2416,7 +2416,7 @@
 		"phone": ""
 	},
 	{
-		"id": "233",
+		"id": 233,
 		"companyName": "(주)예인미술",
 		"representative": "장회운",
 		"address": "서울 성동구 성수동2가 289320",
@@ -2427,7 +2427,7 @@
 		"phone": ""
 	},
 	{
-		"id": "234",
+		"id": 234,
 		"companyName": "(주)오마이데이타",
 		"representative": "이용순",
 		"address": "서울 성동구 성수동2가 33315 시그마밸리2차1105호",
@@ -2436,14 +2436,14 @@
 		"phone": ""
 	},
 	{
-		"id": "235",
+		"id": 235,
 		"companyName": "(주)이베이코리아",
 		"addressDetail": "",
 		"businessNumber": "2208183676",
 		"phone": ""
 	},
 	{
-		"id": "236",
+		"id": 236,
 		"companyName": "(주)자윤프린팅",
 		"representative": "박진우",
 		"address": "경기도 파주시 상지석동 9955 4동",
@@ -2454,7 +2454,7 @@
 		"phone": ""
 	},
 	{
-		"id": "237",
+		"id": 237,
 		"companyName": "(주)제이피앤씨",
 		"representative": "이기형",
 		"address": "서울 중구 수표로6길 26(충무로3가, 동성빌딩4층)",
@@ -2465,7 +2465,7 @@
 		"phone": ""
 	},
 	{
-		"id": "238",
+		"id": 238,
 		"companyName": "(주)조양애드컴",
 		"representative": "정무혁",
 		"address": "서울 중구 필동로 45(필동3가)",
@@ -2476,7 +2476,7 @@
 		"phone": ""
 	},
 	{
-		"id": "239",
+		"id": 239,
 		"companyName": "(주)종로맥시스템",
 		"representative": "이태광",
 		"address": "대구 중구 하서동 23",
@@ -2487,7 +2487,7 @@
 		"phone": ""
 	},
 	{
-		"id": "240",
+		"id": 240,
 		"companyName": "(주)줌인포테크",
 		"representative": "전영민",
 		"address": "서울 중구 초동 42 아시아미디어타워 802호~803호",
@@ -2498,7 +2498,7 @@
 		"phone": ""
 	},
 	{
-		"id": "241",
+		"id": 241,
 		"companyName": "(주)중앙문화사",
 		"representative": "정찬식",
 		"address": "경기도 고양시 덕양구 통일로 140 B313(동산동,삼송테크로밸리)",
@@ -2509,7 +2509,7 @@
 		"phone": ""
 	},
 	{
-		"id": "242",
+		"id": 242,
 		"companyName": "(주)투데이아트",
 		"representative": "박장서",
 		"address": "서울 중구 퇴계로 18길 46(남산동1가)",
@@ -2520,7 +2520,7 @@
 		"phone": ""
 	},
 	{
-		"id": "243",
+		"id": 243,
 		"companyName": "(주)포지션",
 		"representative": "배영환",
 		"address": "대구광역시 중구 재마루 1길 411(남산동)",
@@ -2531,7 +2531,7 @@
 		"phone": ""
 	},
 	{
-		"id": "244",
+		"id": 244,
 		"companyName": "(주)효리원",
 		"representative": "윤종근",
 		"address": "서울시 종로구 삼일대로 457(경운동) 1206호",
@@ -2542,7 +2542,7 @@
 		"phone": ""
 	},
 	{
-		"id": "245",
+		"id": 245,
 		"companyName": "M. D Com",
 		"representative": "박준수",
 		"address": "서울특별시 중구 퇴계로30길 24 지하1층 1083호(예장동, 예장동 삼익아파트)",
@@ -2553,7 +2553,7 @@
 		"phone": ""
 	},
 	{
-		"id": "246",
+		"id": 246,
 		"companyName": "광고원",
 		"representative": "박창희",
 		"address": "대구광역시 달성구 화원읍 명천로33길 40",
@@ -2564,7 +2564,7 @@
 		"phone": ""
 	},
 	{
-		"id": "247",
+		"id": 247,
 		"companyName": "광명기획인쇄",
 		"representative": "최재구",
 		"address": "전북 익산시 남중동 32315",
@@ -2575,7 +2575,7 @@
 		"phone": ""
 	},
 	{
-		"id": "248",
+		"id": 248,
 		"companyName": "광인문화사",
 		"representative": "이영실",
 		"address": "광주광역시 동구 백서로153번길 16(서석동)",
@@ -2586,7 +2586,7 @@
 		"phone": ""
 	},
 	{
-		"id": "249",
+		"id": 249,
 		"companyName": "국인사",
 		"representative": "한상경",
 		"address": "경기도 고양시 일산동구 장항동 61825",
@@ -2597,7 +2597,7 @@
 		"phone": ""
 	},
 	{
-		"id": "250",
+		"id": 250,
 		"companyName": "국제프레스",
 		"representative": "최재혁",
 		"address": "서울시 중구 충무로 391(초동,2층)",
@@ -2608,7 +2608,7 @@
 		"phone": ""
 	},
 	{
-		"id": "251",
+		"id": 251,
 		"companyName": "굿컴(good com)",
 		"representative": "정일영",
 		"address": "경기도 화성시 우정읍 버들로 851",
@@ -2619,7 +2619,7 @@
 		"phone": ""
 	},
 	{
-		"id": "252",
+		"id": 252,
 		"companyName": "금명문화(주)",
 		"representative": "김명식",
 		"address": "서울 성동구 성수일로 108",
@@ -2630,7 +2630,7 @@
 		"phone": ""
 	},
 	{
-		"id": "253",
+		"id": 253,
 		"companyName": "누리원색",
 		"representative": "김창규",
 		"address": "서울특별시 중구 충무로 201, 501(충무로3가, 대한빌딩)",
@@ -2641,7 +2641,7 @@
 		"phone": ""
 	},
 	{
-		"id": "254",
+		"id": 254,
 		"companyName": "다복",
 		"representative": "강문수",
 		"address": "서울 중구 을지로20길 321(인현종2가,1층공장)",
@@ -2652,7 +2652,7 @@
 		"phone": ""
 	},
 	{
-		"id": "255",
+		"id": 255,
 		"companyName": "다원프린텍",
 		"representative": "김승준",
 		"address": "경기도 고양시 일산동구 장대길 42103(장항동)",
@@ -2663,7 +2663,7 @@
 		"phone": ""
 	},
 	{
-		"id": "256",
+		"id": 256,
 		"companyName": "대동출력",
 		"representative": "김교성",
 		"address": "서울시 중구 인현동1가 1116 2층 1호",
@@ -2674,7 +2674,7 @@
 		"phone": ""
 	},
 	{
-		"id": "257",
+		"id": 257,
 		"companyName": "대산그래픽",
 		"representative": "임용병",
 		"address": "서울시 중구 퇴계로 197,9201(필동2가,충무빌딩별관)",
@@ -2685,7 +2685,7 @@
 		"phone": ""
 	},
 	{
-		"id": "258",
+		"id": 258,
 		"companyName": "대산아트콤",
 		"representative": "이형재",
 		"address": "경기도 파주시 직지길 438, 1층(문발동)",
@@ -2696,7 +2696,7 @@
 		"phone": ""
 	},
 	{
-		"id": "259",
+		"id": 259,
 		"companyName": "대원인쇄사",
 		"representative": "김기산",
 		"address": "서울시 강서구 염창동 24021외 1필지 우림블루나인비지니스센타 1층B103호",
@@ -2707,7 +2707,7 @@
 		"phone": ""
 	},
 	{
-		"id": "260",
+		"id": 260,
 		"companyName": "대전프로세스",
 		"representative": "이문학",
 		"address": "대전시 동구 정동 364 2층",
@@ -2718,7 +2718,7 @@
 		"phone": ""
 	},
 	{
-		"id": "261",
+		"id": 261,
 		"companyName": "대진",
 		"representative": "윤영미",
 		"address": "경기도 화성시 우정읍 바수게길 118",
@@ -2729,7 +2729,7 @@
 		"phone": ""
 	},
 	{
-		"id": "262",
+		"id": 262,
 		"companyName": "동경씨앤피",
 		"representative": "김철",
 		"address": "서울 영등포구 문래동1가 센터플러스비 10 6",
@@ -2740,7 +2740,7 @@
 		"phone": ""
 	},
 	{
-		"id": "263",
+		"id": 263,
 		"companyName": "동아소프트",
 		"representative": "김태환",
 		"address": "부산 금정구 구서2동 1627 센트리움O/T 1303호",
@@ -2751,7 +2751,7 @@
 		"phone": ""
 	},
 	{
-		"id": "264",
+		"id": 264,
 		"companyName": "동완기획",
 		"representative": "강덕형",
 		"address": "대구광역시 동구 해동로 125(입석동) 2층",
@@ -2762,7 +2762,7 @@
 		"phone": ""
 	},
 	{
-		"id": "265",
+		"id": 265,
 		"companyName": "동일미디어",
 		"representative": "김동철",
 		"address": "서울 중구 마른내로4가길 22(인현동1가)",
@@ -2773,7 +2773,7 @@
 		"phone": ""
 	},
 	{
-		"id": "266",
+		"id": 266,
 		"companyName": "동일사진문화",
 		"representative": "지인구",
 		"address": "경기도 고양시 일산 가좌동 5512",
@@ -2784,14 +2784,14 @@
 		"phone": ""
 	},
 	{
-		"id": "267",
+		"id": 267,
 		"companyName": "동일인쇄",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "268",
+		"id": 268,
 		"companyName": "디자인고",
 		"representative": "강성진",
 		"addressDetail": "",
@@ -2799,7 +2799,7 @@
 		"phone": ""
 	},
 	{
-		"id": "269",
+		"id": 269,
 		"companyName": "디자인국제",
 		"representative": "강희경",
 		"address": "대전광역시 동구 태전로 57 (삼성동)",
@@ -2810,7 +2810,7 @@
 		"phone": ""
 	},
 	{
-		"id": "270",
+		"id": 270,
 		"companyName": "디자인럭기획",
 		"representative": "유영옥",
 		"address": "서울시 종로구 이화장길 6, 2층(이화동)",
@@ -2821,7 +2821,7 @@
 		"phone": ""
 	},
 	{
-		"id": "271",
+		"id": 271,
 		"companyName": "마이크로네트",
 		"representative": "이영호",
 		"address": "서울시 중구 퇴계로36길 97(필동2가,혁성빌딩3층)",
@@ -2832,7 +2832,7 @@
 		"phone": ""
 	},
 	{
-		"id": "272",
+		"id": 272,
 		"companyName": "모든인쇄문화사",
 		"representative": "구자빈",
 		"address": "대전광역시 동구 우암로50번길 58(삼성동)",
@@ -2843,7 +2843,7 @@
 		"phone": ""
 	},
 	{
-		"id": "273",
+		"id": 273,
 		"companyName": "민데이타시스템",
 		"representative": "이교재",
 		"address": "서울 강서구 양천로 75길 2216(염창동, 양지빌라)",
@@ -2854,7 +2854,7 @@
 		"phone": ""
 	},
 	{
-		"id": "274",
+		"id": 274,
 		"companyName": "민언프린텍(주)",
 		"representative": "김순귀",
 		"address": "경기 고양시 일산동구 장항동 5916",
@@ -2865,7 +2865,7 @@
 		"phone": ""
 	},
 	{
-		"id": "275",
+		"id": 275,
 		"companyName": "블루아이스큐브",
 		"representative": "송호준",
 		"address": "경지도 파주시 문발로 21434(문발동)",
@@ -2876,7 +2876,7 @@
 		"phone": ""
 	},
 	{
-		"id": "276",
+		"id": 276,
 		"companyName": "삼보인쇄사",
 		"representative": "양재광",
 		"address": "서울시 중구 을지로22길 11(을지로4가)",
@@ -2887,7 +2887,7 @@
 		"phone": ""
 	},
 	{
-		"id": "277",
+		"id": 277,
 		"companyName": "삼양프로세스",
 		"representative": "김용태",
 		"address": "서울시 중구 인현동2가 18121 1층",
@@ -2898,7 +2898,7 @@
 		"phone": ""
 	},
 	{
-		"id": "278",
+		"id": 278,
 		"companyName": "서울프린테크",
 		"representative": "신명옥",
 		"address": "서울시 중구 퇴계로42길 26 지하1층",
@@ -2909,7 +2909,7 @@
 		"phone": ""
 	},
 	{
-		"id": "279",
+		"id": 279,
 		"companyName": "서원실업",
 		"representative": "박기득",
 		"address": "경기도 고양시 일산서구 구산로 135번길 90",
@@ -2920,7 +2920,7 @@
 		"phone": ""
 	},
 	{
-		"id": "280",
+		"id": 280,
 		"companyName": "서진티피에스",
 		"representative": "최경호",
 		"address": "서울시 중구 을지로18길 5, 201호",
@@ -2931,7 +2931,7 @@
 		"phone": ""
 	},
 	{
-		"id": "281",
+		"id": 281,
 		"companyName": "성림",
 		"representative": "오두봉",
 		"address": "서울시 중구 수표동 5611 4층 401",
@@ -2942,7 +2942,7 @@
 		"phone": ""
 	},
 	{
-		"id": "282",
+		"id": 282,
 		"companyName": "세창인쇄사",
 		"representative": "문형원",
 		"address": "서울시 중구 마른내로 29,402(인현동2가,4층)",
@@ -2953,7 +2953,7 @@
 		"phone": ""
 	},
 	{
-		"id": "283",
+		"id": 283,
 		"companyName": "소호맥시스템",
 		"representative": "장현태",
 		"address": "서울 중구 초동 428 아시아미디어타워8층",
@@ -2964,7 +2964,7 @@
 		"phone": ""
 	},
 	{
-		"id": "284",
+		"id": 284,
 		"companyName": "솔씨티피",
 		"representative": "정철희",
 		"address": "서울시 중구 퇴계로36길 27,2층 202호(필동2가,송원빌딩)",
@@ -2975,7 +2975,7 @@
 		"phone": ""
 	},
 	{
-		"id": "285",
+		"id": 285,
 		"companyName": "수덕인쇄사",
 		"representative": "정지영",
 		"address": "충청북도 청주시 서원구 호국로 27(사직동)",
@@ -2986,7 +2986,7 @@
 		"phone": ""
 	},
 	{
-		"id": "286",
+		"id": 286,
 		"companyName": "슈컴(주)",
 		"representative": "김기홍",
 		"address": "서울시 용산구 새창로 181, 21동3층 동 3층 3096호(한강로2가,선인상가)",
@@ -2997,7 +2997,7 @@
 		"phone": ""
 	},
 	{
-		"id": "287",
+		"id": 287,
 		"companyName": "신도인쇄사",
 		"representative": "전영철",
 		"address": "경기도 고양시 일산동구 장항로225번길 216(장항동)",
@@ -3008,7 +3008,7 @@
 		"phone": ""
 	},
 	{
-		"id": "288",
+		"id": 288,
 		"companyName": "신창디지털프린텍",
 		"representative": "문창균",
 		"address": "대전광역시 동구 우암로50번길 5(삼성동)",
@@ -3019,7 +3019,7 @@
 		"phone": ""
 	},
 	{
-		"id": "289",
+		"id": 289,
 		"companyName": "신화기획",
 		"representative": "임승규",
 		"address": "서울 중구 을지로3가 3441 2층 203",
@@ -3030,7 +3030,7 @@
 		"phone": ""
 	},
 	{
-		"id": "290",
+		"id": 290,
 		"companyName": "신화출력",
 		"representative": "백영성",
 		"address": "경기 고양시 일산동구 장대길 105번길 86,2",
@@ -3041,7 +3041,7 @@
 		"phone": ""
 	},
 	{
-		"id": "291",
+		"id": 291,
 		"companyName": "아람에디트",
 		"representative": "김윤철",
 		"address": "서울시 중구 마른내로 115(오장동,2층)",
@@ -3052,7 +3052,7 @@
 		"phone": ""
 	},
 	{
-		"id": "292",
+		"id": 292,
 		"companyName": "앤컴",
 		"representative": "지승관외2명",
 		"address": "서울 영등포구 양평로12가길 15(양평동4가,1층,지하)",
@@ -3063,7 +3063,7 @@
 		"phone": ""
 	},
 	{
-		"id": "293",
+		"id": 293,
 		"companyName": "에스퍼테크놀로지(주)",
 		"representative": "이희태",
 		"address": "서울 중구 충무로 13, 605호(충무로3가,엘크루트시티)",
@@ -3074,7 +3074,7 @@
 		"phone": ""
 	},
 	{
-		"id": "294",
+		"id": 294,
 		"companyName": "에이제이파크 주식회사",
 		"representative": "이광재",
 		"address": "경기도 안산시 단원구 광덕서로 78(고잔동,대한법조)",
@@ -3085,7 +3085,7 @@
 		"phone": ""
 	},
 	{
-		"id": "295",
+		"id": 295,
 		"companyName": "예솜기획인쇄",
 		"representative": "권현주",
 		"address": "대전 동구 중동 121 2층",
@@ -3096,7 +3096,7 @@
 		"phone": ""
 	},
 	{
-		"id": "296",
+		"id": 296,
 		"companyName": "왈츠디자인",
 		"representative": "김주미",
 		"address": "경기도 파주시 회동길 183,2층 201호(문발동,주택문화사)",
@@ -3107,7 +3107,7 @@
 		"phone": ""
 	},
 	{
-		"id": "297",
+		"id": 297,
 		"companyName": "우리그래픽",
 		"representative": "김점석",
 		"address": "서울 중구 충무로4가 1488 기종빌딩 별관5층",
@@ -3118,7 +3118,7 @@
 		"phone": ""
 	},
 	{
-		"id": "298",
+		"id": 298,
 		"companyName": "우성출력",
 		"representative": "유옥자",
 		"address": "서울시 영등포구 영신로32길 10, 3층(영등포4가)",
@@ -3128,7 +3128,7 @@
 		"phone": ""
 	},
 	{
-		"id": "299",
+		"id": 299,
 		"companyName": "우주문화사",
 		"representative": "신기선",
 		"address": "부산광역시 동구 중앙대로 232(초량동), 지하1층",
@@ -3139,7 +3139,7 @@
 		"phone": ""
 	},
 	{
-		"id": "300",
+		"id": 300,
 		"companyName": "의학출판사",
 		"representative": "박희규",
 		"address": "서울시 중구 수표로 422(저동2가,2층)",
@@ -3150,7 +3150,7 @@
 		"phone": ""
 	},
 	{
-		"id": "301",
+		"id": 301,
 		"companyName": "이노씨엔에스",
 		"representative": "권송수",
 		"address": "서울 용산구 신계동 401",
@@ -3161,7 +3161,7 @@
 		"phone": ""
 	},
 	{
-		"id": "302",
+		"id": 302,
 		"companyName": "이승준",
 		"representative": "이승준",
 		"addressDetail": "",
@@ -3169,7 +3169,7 @@
 		"phone": ""
 	},
 	{
-		"id": "303",
+		"id": 303,
 		"companyName": "이음앤커뮤니케이션(주)",
 		"representative": "이현숙",
 		"address": "서울 중구 삼일대로 6길 20",
@@ -3180,7 +3180,7 @@
 		"phone": ""
 	},
 	{
-		"id": "304",
+		"id": 304,
 		"companyName": "이지미술",
 		"representative": "정용환",
 		"address": "서울 중구 충무로3가 제복빌딩 1층102호,2층202호",
@@ -3191,7 +3191,7 @@
 		"phone": ""
 	},
 	{
-		"id": "305",
+		"id": 305,
 		"companyName": "인포테크",
 		"representative": "손민호",
 		"address": "경기도 성남시 수정구 논골로36번길 15, 103동1203호(양지동, 우성에비뉴아파트)",
@@ -3202,14 +3202,14 @@
 		"phone": ""
 	},
 	{
-		"id": "306",
+		"id": 306,
 		"companyName": "장성호 세무서",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "307",
+		"id": 307,
 		"companyName": "정설출력",
 		"representative": "진정일",
 		"address": "서울 중구 충무로 301 (초동,2층)",
@@ -3220,7 +3220,7 @@
 		"phone": ""
 	},
 	{
-		"id": "308",
+		"id": 308,
 		"companyName": "정시스템",
 		"representative": "박성자",
 		"address": "경기도 파주시 번영로55(금촌동, 새꽃마을뜨란채)",
@@ -3231,7 +3231,7 @@
 		"phone": ""
 	},
 	{
-		"id": "309",
+		"id": 309,
 		"companyName": "제이에이시스템 주식회사",
 		"representative": "고광윤",
 		"address": "서울 중구 충무로 13, 5층 504호(충무로3가, 엘크루메트로시티)",
@@ -3242,7 +3242,7 @@
 		"phone": ""
 	},
 	{
-		"id": "310",
+		"id": 310,
 		"companyName": "조일문화인쇄사",
 		"representative": "송재호",
 		"address": "서울 성동구 성수동2가 27335",
@@ -3253,7 +3253,7 @@
 		"phone": ""
 	},
 	{
-		"id": "311",
+		"id": 311,
 		"companyName": "좋은마음출력",
 		"representative": "허명화",
 		"address": "서울시 중구 을지로3가 29140 1층",
@@ -3264,7 +3264,7 @@
 		"phone": ""
 	},
 	{
-		"id": "312",
+		"id": 312,
 		"companyName": "주식회사 글로벌피앤씨",
 		"representative": "이은지",
 		"address": "경기도 파주시 장면산길 7, 1층(오도동)",
@@ -3275,7 +3275,7 @@
 		"phone": ""
 	},
 	{
-		"id": "313",
+		"id": 313,
 		"companyName": "주식회사 더라이트",
 		"representative": "김종태",
 		"address": "경기도 파주시 장면산길 7(오도동)",
@@ -3286,7 +3286,7 @@
 		"phone": ""
 	},
 	{
-		"id": "314",
+		"id": 314,
 		"companyName": "주식회사 더한스",
 		"representative": "한부귀",
 		"address": "서울시 종로구 홍지문길 34, 나403(홍지동,경진주택)",
@@ -3297,7 +3297,7 @@
 		"phone": ""
 	},
 	{
-		"id": "315",
+		"id": 315,
 		"companyName": "주식회사 디앤피포인트",
 		"representative": "김남기",
 		"address": "서울시 중구 필동1가 33 세원 B/D 302,405,406호",
@@ -3308,7 +3308,7 @@
 		"phone": ""
 	},
 	{
-		"id": "316",
+		"id": 316,
 		"companyName": "주식회사 상식문화",
 		"representative": "양현식,유은상",
 		"address": "경기도 고양시 일산동구 장대길 4221, 가동,나동 (장항동)",
@@ -3319,7 +3319,7 @@
 		"phone": ""
 	},
 	{
-		"id": "317",
+		"id": 317,
 		"companyName": "주식회사 쓰임앤끌림",
 		"representative": "조기상,박한얼",
 		"address": "서울특별시 은평구 연서로 2971,3층(불광동, 블랙스퀘어)",
@@ -3330,7 +3330,7 @@
 		"phone": ""
 	},
 	{
-		"id": "318",
+		"id": 318,
 		"companyName": "주식회사 열린출력",
 		"representative": "송명식",
 		"address": "서울시 영등포구 영등포로34길 12 (영등포동4가,2층)",
@@ -3341,7 +3341,7 @@
 		"phone": ""
 	},
 	{
-		"id": "319",
+		"id": 319,
 		"companyName": "주식회사 인터프로커뮤니케이션",
 		"representative": "김상회",
 		"address": "서울시 중구 퇴계로36길 43(필동2가,동일빌딩1,2층)",
@@ -3352,7 +3352,7 @@
 		"phone": ""
 	},
 	{
-		"id": "320",
+		"id": 320,
 		"companyName": "주식회사 재원프린팅",
 		"representative": "위영송",
 		"address": "경기도 고양시 일산동구 장항동 5917 나",
@@ -3363,7 +3363,7 @@
 		"phone": ""
 	},
 	{
-		"id": "321",
+		"id": 321,
 		"companyName": "주식회사 제일디엔씨",
 		"representative": "김상태",
 		"address": "울산광역시 동구 일산진2길 19(일산동)",
@@ -3374,7 +3374,7 @@
 		"phone": ""
 	},
 	{
-		"id": "322",
+		"id": 322,
 		"companyName": "주식회사 중앙피앤씨",
 		"representative": "임현채",
 		"address": "서울 중구 충무로 22,2층(인현동1가,호운빌딩)",
@@ -3385,7 +3385,7 @@
 		"phone": ""
 	},
 	{
-		"id": "323",
+		"id": 323,
 		"companyName": "주식회사 태웅씨앤피",
 		"representative": "권웅일",
 		"address": "서울 중구 퇴계로36가길 70(필동2가, 패밀리빌딩 102,103,201호)",
@@ -3396,7 +3396,7 @@
 		"phone": ""
 	},
 	{
-		"id": "324",
+		"id": 324,
 		"companyName": "주식회사 포유프린팅",
 		"representative": "김석진",
 		"address": "서울시 중구 충무로 29, 201호(초동, 아시아미디어타워)",
@@ -3407,7 +3407,7 @@
 		"phone": ""
 	},
 	{
-		"id": "325",
+		"id": 325,
 		"companyName": "주식회사 풀린키",
 		"representative": "김일영",
 		"address": "서울시 중구 마른내로 659(인현동2가)3층 1호",
@@ -3418,7 +3418,7 @@
 		"phone": ""
 	},
 	{
-		"id": "326",
+		"id": 326,
 		"companyName": "주식회사 프로카피",
 		"representative": "이옥섭",
 		"address": "서울 중구 을지로3가 29140 명성빌딩",
@@ -3429,7 +3429,7 @@
 		"phone": ""
 	},
 	{
-		"id": "327",
+		"id": 327,
 		"companyName": "주식회사 프린팅허브",
 		"representative": "오현우",
 		"address": "경기도 파주시 직지길 446, 2층(문발동)",
@@ -3440,7 +3440,7 @@
 		"phone": ""
 	},
 	{
-		"id": "328",
+		"id": 328,
 		"companyName": "주식회사 한빛",
 		"representative": "최지형",
 		"address": "대구광역시 중구 관덕정길 10,601(남산동,정안빌딩6층)",
@@ -3451,7 +3451,7 @@
 		"phone": ""
 	},
 	{
-		"id": "329",
+		"id": 329,
 		"companyName": "주식회사 한생미",
 		"representative": "윤병갑",
 		"address": "서울 종로구 통일로 16길 5, 지하1층(무악동, 시온빌딩)",
@@ -3462,21 +3462,21 @@
 		"phone": ""
 	},
 	{
-		"id": "330",
+		"id": 330,
 		"companyName": "중국 파운더",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "331",
+		"id": 331,
 		"companyName": "카드",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "332",
+		"id": 332,
 		"companyName": "컴뱅크",
 		"representative": "문경진",
 		"address": "부산 중구 동광동4가 256 2층",
@@ -3487,7 +3487,7 @@
 		"phone": ""
 	},
 	{
-		"id": "333",
+		"id": 333,
 		"companyName": "케이투프로",
 		"representative": "김재용",
 		"address": "서울시 중구 충무로4가 1203 외1필지제1층제다21,22호",
@@ -3498,7 +3498,7 @@
 		"phone": ""
 	},
 	{
-		"id": "334",
+		"id": 334,
 		"companyName": "큐시스템",
 		"representative": "김연규",
 		"address": "서울 송파구 거여동 290 거여1단지아파트 1021005",
@@ -3509,7 +3509,7 @@
 		"phone": ""
 	},
 	{
-		"id": "335",
+		"id": 335,
 		"companyName": "태영문화사&정동CTP",
 		"representative": "박춘희외1명",
 		"address": "대전광역시 동구 태전로 29(중동)",
@@ -3520,7 +3520,7 @@
 		"phone": ""
 	},
 	{
-		"id": "336",
+		"id": 336,
 		"companyName": "태영미디어",
 		"representative": "이상원",
 		"address": "경기도 파주시 지목로 131번길 16(신촌동,A)",
@@ -3531,7 +3531,7 @@
 		"phone": ""
 	},
 	{
-		"id": "337",
+		"id": 337,
 		"companyName": "태한인쇄사",
 		"representative": "김창호",
 		"address": "제주특별자치도 제주시 이도이동 10102",
@@ -3542,7 +3542,7 @@
 		"phone": ""
 	},
 	{
-		"id": "338",
+		"id": 338,
 		"companyName": "투에스시스템",
 		"representative": "박범수",
 		"address": "충청북도 청주시 상당구 대성로 201(수동)",
@@ -3553,7 +3553,7 @@
 		"phone": ""
 	},
 	{
-		"id": "339",
+		"id": 339,
 		"companyName": "포지션",
 		"representative": "이상현",
 		"address": "대구광역시 중구 명륜로 24(남산동,2층)",
@@ -3564,7 +3564,7 @@
 		"phone": ""
 	},
 	{
-		"id": "340",
+		"id": 340,
 		"companyName": "프로필",
 		"representative": "김영대",
 		"address": "대구광영시 중구 명륜로6길 6(남산동)",
@@ -3575,7 +3575,7 @@
 		"phone": ""
 	},
 	{
-		"id": "341",
+		"id": 341,
 		"companyName": "프린팅파크",
 		"representative": "이영자",
 		"address": "경기도 고양시 일산동구 장항로 291,2층(장항동)",
@@ -3586,7 +3586,7 @@
 		"phone": ""
 	},
 	{
-		"id": "342",
+		"id": 342,
 		"companyName": "필커뮤니케이션",
 		"representative": "이춘범",
 		"address": "서울특별시 중구 을지로14길 15(을지로3가, 장양빌딩2층)",
@@ -3597,7 +3597,7 @@
 		"phone": ""
 	},
 	{
-		"id": "343",
+		"id": 343,
 		"companyName": "하나시스",
 		"representative": "안경환",
 		"address": "서울 용산구 원효로3가 5137 E테크벨리",
@@ -3608,14 +3608,14 @@
 		"phone": ""
 	},
 	{
-		"id": "344",
+		"id": 344,
 		"companyName": "하나출력",
 		"addressDetail": "",
 		"businessNumber": "",
 		"phone": ""
 	},
 	{
-		"id": "345",
+		"id": 345,
 		"companyName": "한강CTP",
 		"representative": "김용근외1명",
 		"address": "서울 중구 필동로 45, 2층(필동3가,조양빌딩)",
@@ -3626,7 +3626,7 @@
 		"phone": ""
 	},
 	{
-		"id": "346",
+		"id": 346,
 		"companyName": "한림문화사",
 		"representative": "이재선",
 		"address": "서울시 영등포구 경인로82길 34(문래동1가, 센터플러스2층)",
@@ -3637,7 +3637,7 @@
 		"phone": ""
 	},
 	{
-		"id": "347",
+		"id": 347,
 		"companyName": "한솔프로세스",
 		"representative": "임인환외 1명",
 		"address": "서울특별시 중구 퇴계로27길 53, 2층(저동2가)",
@@ -3648,7 +3648,7 @@
 		"phone": ""
 	},
 	{
-		"id": "348",
+		"id": 348,
 		"companyName": "해남윤씨귤정공파법인(수익)",
 		"representative": "윤내현",
 		"address": "서울 중구 저동2가 4827",
@@ -3659,7 +3659,7 @@
 		"phone": ""
 	},
 	{
-		"id": "349",
+		"id": 349,
 		"companyName": "허브",
 		"representative": "신동구",
 		"address": "서울시 중구 수표로 226, 3층 301호(충무로3가)",
@@ -3670,7 +3670,7 @@
 		"phone": ""
 	},
 	{
-		"id": "350",
+		"id": 350,
 		"companyName": "현디자인",
 		"representative": "우정식",
 		"address": "서울시 중구 퇴계로 36가실 80 (필동2가)",
@@ -3681,7 +3681,7 @@
 		"phone": ""
 	},
 	{
-		"id": "351",
+		"id": 351,
 		"companyName": "현성이엔지",
 		"representative": "유인재",
 		"address": "서울특별시 은평구 연서로9길 91(역촌동)",
@@ -3692,7 +3692,7 @@
 		"phone": ""
 	},
 	{
-		"id": "352",
+		"id": 352,
 		"companyName": "현성프린팅",
 		"representative": "김호성",
 		"address": "서울 영등포구 경인로 82길 34, B220호(문래동1가,센터플러스)",
@@ -3703,7 +3703,7 @@
 		"phone": ""
 	},
 	{
-		"id": "353",
+		"id": 353,
 		"companyName": "홍진피앤피",
 		"representative": "정나리",
 		"address": "서울특별시 중구 충무로2길 15, 203호(충무로4가, 일진빌딩)",

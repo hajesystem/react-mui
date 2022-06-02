@@ -1,50 +1,42 @@
-import React from 'react';
-import { Button, Paper, Stack } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import {
+	Button,
+	createTheme,
+	Paper,
+	Stack,
+	ThemeProvider,
+} from '@mui/material';
 import {
 	DataGrid,
 	GridColDef,
 	GridRenderCellParams,
+	GridSelectionModel,
 	GridValueFormatterParams,
 } from '@mui/x-data-grid';
+import { koKR } from '@mui/material/locale';
 import rowData from './tabledata.json';
 
-// type BusinessRegistrationType = {
-// 	id: number;
-// 	companyName: string;
-// 	representative?: string;
-// 	businessNumber?: string;
-// 	address?: string;
-// 	addressDetail?: string;
-// 	businessType?: string;
-// 	businessItem?: string;
-// 	email?: string;
-// 	phone?: string;
-// 	memo?: string;
-// };
-
-// function ExpandableCell({ value }: GridRenderCellParams) {
-// 	const [expanded, setExpanded] = React.useState(false);
-
-// 	return (
-// 		<Box>
-// 			{expanded ? value : value.slice(0, 10)}&nbsp;
-// 			{value.length > 20 && (
-// 				// eslint-disable-next-line jsx-a11y/anchor-is-valid
-// 				<Link
-// 					type="button"
-// 					component="button"
-// 					sx={{ fontSize: 'inherit' }}
-// 					onClick={() => setExpanded(!expanded)}
-// 				>
-// 					{expanded ? 'view less' : '더보기'}
-// 				</Link>
-// 			)}
-// 		</Box>
-// 	);
-// }
+type BusinessRegistrationType = {
+	id: number;
+	companyName: string;
+	representative?: string;
+	businessNumber?: string;
+	address?: string;
+	addressDetail?: string;
+	businessType?: string;
+	businessItem?: string;
+	email?: string;
+	phone?: string;
+	memo?: string;
+};
 
 export default function TablePage() {
-	const [pageSize, setPageSize] = React.useState<number>(10);
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const [rows, setRows] = useState<BusinessRegistrationType[]>(rowData);
+	const [pageSize, setPageSize] = useState<number>(10);
+	const [selectionModel, setSelectionModel] = useState<GridSelectionModel>([]);
+
+	useEffect(() => console.log(selectionModel), [selectionModel]);
 
 	const columns: GridColDef[] = [
 		// { field: 'id', headerName: 'ID' },
@@ -76,10 +68,10 @@ export default function TablePage() {
 			renderCell: (params: GridRenderCellParams) => {
 				const { id } = params;
 				const detile = rows.filter((row) => row.id === id);
-				const a = `${params.value} ${detile[0].addressDetail}`;
+				const text = `${params.value} ${detile[0].addressDetail}`;
 				return (
 					<Button variant="text" onClick={() => console.log(params.value)}>
-						{a}
+						{text}
 					</Button>
 				);
 			},
@@ -100,20 +92,37 @@ export default function TablePage() {
 		{ field: 'phone', headerName: '연락처', headerAlign: 'center', flex: 50 },
 		{ field: 'memo', headerName: '메모', headerAlign: 'center', flex: 50 },
 	];
-	const rows = rowData;
+
+	const theme = createTheme(
+		{
+			palette: {
+				primary: { main: '#1976d2' },
+			},
+		},
+		koKR
+	);
+
 	return (
 		<Paper elevation={3} sx={{ p: 2, mb: 2 }}>
-			<Stack spacing={3}>
-				<DataGrid
-					columns={columns}
-					rows={rows}
-					autoHeight
-					pageSize={pageSize}
-					pagination
-					onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
-					rowsPerPageOptions={[10, 25, 50, 100]}
-				/>
-			</Stack>
+			<ThemeProvider theme={theme}>
+				<Stack spacing={3}>
+					<DataGrid
+						checkboxSelection
+						disableSelectionOnClick
+						onSelectionModelChange={(newSelectionModel) => {
+							setSelectionModel(newSelectionModel);
+						}}
+						// selectionModel={selectionModel}
+						columns={columns}
+						rows={rows}
+						autoHeight
+						pageSize={pageSize}
+						pagination
+						onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
+						rowsPerPageOptions={[10, 25, 50, 100]}
+					/>
+				</Stack>
+			</ThemeProvider>
 		</Paper>
 	);
 }
