@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, Stack } from '@mui/material';
+import { Button, Paper, Stack } from '@mui/material';
 import {
 	DataGrid,
 	GridColDef,
@@ -78,9 +78,9 @@ export default function TablePage() {
 				const detile = rows.filter((row) => row.id === id);
 				const a = `${params.value} ${detile[0].addressDetail}`;
 				return (
-					<button type="button" onClick={() => console.log(params.value)}>
+					<Button variant="text" onClick={() => console.log(params.value)}>
 						{a}
-					</button>
+					</Button>
 				);
 			},
 		},
