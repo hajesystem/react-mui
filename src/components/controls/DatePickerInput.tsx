@@ -22,6 +22,7 @@ export default function DatePickerInput({
 		<DatePicker
 			label={label}
 			value={value}
+			showToolbar={false}
 			inputFormat="yyyy년MM월dd일"
 			mask="____년__월__일"
 			onChange={(newValue) => {

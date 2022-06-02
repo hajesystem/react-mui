@@ -1,3 +1,4 @@
 import FormPage from './FormPage';
+import TablePage from './TablePage';
 
-export default FormPage;
+export { FormPage, TablePage };
