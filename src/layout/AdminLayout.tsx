@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
-import { Box, CssBaseline } from '@mui/material';
+import { Box, createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import { koKR } from '@mui/material/locale';
 import customColor from '../color/color';
 import { Aside, Contants, Header } from '../containers';
-import { FormPage, TablePage } from '../pages';
+import { TablePage } from '../pages';
 
 export default function AdminLayout() {
 	const drawerWidth = 240;
@@ -11,25 +11,28 @@ export default function AdminLayout() {
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);
 	};
+	const theme = createTheme(koKR);
 	return (
-		<Box
-			sx={{
-				display: 'flex',
-				height: '100vh',
-				backgroundColor: customColor.background,
-			}}
-		>
-			<CssBaseline />
-			<Aside
-				onClick={handleDrawerToggle}
-				mobileOpen={mobileOpen}
-				drawerWidth={drawerWidth}
-			/>
-			<Header onClick={handleDrawerToggle} drawerWidth={drawerWidth} />
-			<Contants drawerWidth={drawerWidth}>
-				{/* <FormPage /> */}
-				<TablePage />
-			</Contants>
-		</Box>
+		<ThemeProvider theme={theme}>
+			<Box
+				sx={{
+					display: 'flex',
+					height: '100vh',
+					backgroundColor: customColor.background,
+				}}
+			>
+				<CssBaseline />
+				<Aside
+					onClick={handleDrawerToggle}
+					mobileOpen={mobileOpen}
+					drawerWidth={drawerWidth}
+				/>
+				<Header onClick={handleDrawerToggle} drawerWidth={drawerWidth} />
+				<Contants drawerWidth={drawerWidth}>
+					{/* <FormPage /> */}
+					<TablePage />
+				</Contants>
+			</Box>
+		</ThemeProvider>
 	);
 }
