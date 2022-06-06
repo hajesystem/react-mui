@@ -1,5 +1,6 @@
 import { InputBase } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
+import { DataGrid } from '@mui/x-data-grid';
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -40,4 +41,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	},
 }));
 
-export { Search, SearchIconWrapper, StyledInputBase };
+const SelectedAllCheckboxDisable = styled(DataGrid)(() => ({
+	root: {
+		'& .MuiDataGrid-columnHeaderTitleContainerContent .MuiButtonBase-root': {
+			display: 'none',
+		},
+	},
+}));
+
+export {
+	Search,
+	SearchIconWrapper,
+	StyledInputBase,
+	SelectedAllCheckboxDisable,
+};

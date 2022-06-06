@@ -5,6 +5,7 @@ import {
 	GridToolbarContainer,
 	GridToolbarDensitySelector,
 	GridToolbarExportContainer,
+	GridToolbarQuickFilter,
 	GridToolbarFilterButton,
 } from '@mui/x-data-grid';
 
@@ -23,6 +24,7 @@ export default function TableToolbar() {
 					}}
 				/>
 			</GridToolbarExportContainer>
+			<GridToolbarQuickFilter />
 		</GridToolbarContainer>
 	);
 }
