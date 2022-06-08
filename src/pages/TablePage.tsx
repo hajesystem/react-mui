@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { useEffect, useMemo, useState } from 'react';
 import {
 	Button,
 	Checkbox,
 	FormControl,
 	IconButton,
+	InputAdornment,
 	InputLabel,
 	MenuItem,
 	Paper,
@@ -16,20 +18,23 @@ import {
 	TableContainer,
 	TableHead,
 	TableRow,
+	TextField,
 	useMediaQuery,
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import AddBoxIcon from '@mui/icons-material/AddBox';
+import { Search } from '@mui/icons-material';
+import { debounce, map, values } from 'lodash';
 import { TableColumnType } from '../types';
-import rows from './tabledata.json';
+import tableDatas from './tabledata.json';
 
 export default function TablePage() {
+	const [rows, setRows] = useState(tableDatas);
 	const [pageSize, setPageSize] = useState<number>(10);
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [tableCheckbox, setTableCheckbox] = useState(true);
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [selectionModel, setSelectionModel] = useState<number[]>([]);
+	const [allChecked, setAllChecked] = useState(false);
 
 	const mobileSize = useMediaQuery('(min-width:440px)');
 
@@ -38,7 +43,8 @@ export default function TablePage() {
 		[selectionModel]
 	);
 
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	useEffect(() => console.log('rows lenth >>>', rows.length), [rows]);
+
 	const columns: TableColumnType[] = [
 		{
 			field: 'companyName',
@@ -75,9 +81,53 @@ export default function TablePage() {
 		{ field: 'phone', headerName: '연락처', headerAlign: 'center' },
 	];
 
+	const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		debouncedSearch(e.target.value);
+	};
+
 	const handleChangePageSize = (e: SelectChangeEvent) => {
 		setPageSize(Number(e.target.value as string));
 	};
+
+	const debouncedSearch = useMemo(
+		() =>
+			debounce((value) => {
+				const searchData = map(tableDatas, (record) => {
+					const { ...textSource } = record;
+					const matchText = values(textSource).join('^').match(value);
+					if (!matchText) {
+						return null;
+					}
+					return record;
+				});
+
+				const fieldDatas = searchData.filter(
+					(row) => row !== null && row !== undefined
+				);
+				setRows(fieldDatas as any);
+			}, 200),
+		[]
+	);
+
+	// 체크박스
+	const handleChangeAllChecked = () => {
+		setAllChecked(!allChecked);
+	};
+	useEffect(() => {
+		if (allChecked) {
+			const all: number[] = [];
+			for (let i = 0; i < rows.length; i += 1) {
+				all.push(rows[i].id);
+				setSelectionModel(all);
+			}
+		}
+		if (!allChecked) {
+			setSelectionModel([]);
+		}
+	}, [allChecked]);
+
+	useEffect(() => console.log(allChecked), [allChecked]);
+	useEffect(() => console.log('rows>>', rows), [rows]);
 
 	const screenButtons = (
 		<>
@@ -115,6 +165,18 @@ export default function TablePage() {
 		<Paper elevation={3} sx={{ p: 2, mb: 2 }}>
 			<Stack direction="row" spacing={2} sx={{ mb: 2 }}>
 				{mobileSize ? screenButtons : mobileButtons}
+				<TextField
+					label="검색"
+					size="small"
+					InputProps={{
+						startAdornment: (
+							<InputAdornment position="start">
+								<Search />
+							</InputAdornment>
+						),
+					}}
+					onChange={onChange}
+				/>
 				<FormControl sx={{ width: 100 }} size="small">
 					<InputLabel id="select-label">Rows</InputLabel>
 					<Select
@@ -138,7 +200,11 @@ export default function TablePage() {
 							<TableRow>
 								{tableCheckbox && (
 									<TableCell padding="checkbox">
-										<Checkbox color="primary" />
+										<Checkbox
+											color="primary"
+											checked={allChecked}
+											onChange={handleChangeAllChecked}
+										/>
 									</TableCell>
 								)}
 								{columns.map((column) => (
