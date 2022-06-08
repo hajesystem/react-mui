@@ -25,7 +25,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import { Search } from '@mui/icons-material';
-import { debounce, map, values } from 'lodash';
+import { debounce, map, remove, values } from 'lodash';
 import { TableColumnType } from '../types';
 import tableDatas from './tabledata.json';
 
@@ -126,6 +126,18 @@ export default function TablePage() {
 		}
 	}, [allChecked]);
 
+	const handleChangeChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const { checked, id } = e.target;
+		const rowID = Number(id);
+		if (checked) {
+			setSelectionModel([...selectionModel, rowID]);
+		}
+		if (!checked) {
+			const newArray = remove(selectionModel, (n) => n !== rowID);
+			setSelectionModel(newArray);
+		}
+	};
+
 	useEffect(() => console.log(allChecked), [allChecked]);
 	useEffect(() => console.log('rows>>', rows), [rows]);
 
@@ -203,6 +215,9 @@ export default function TablePage() {
 										<Checkbox
 											color="primary"
 											checked={allChecked}
+											indeterminate={
+												allChecked && rows.length !== selectionModel.length
+											}
 											onChange={handleChangeAllChecked}
 										/>
 									</TableCell>
@@ -229,7 +244,12 @@ export default function TablePage() {
 								>
 									{tableCheckbox && (
 										<TableCell padding="checkbox">
-											<Checkbox color="primary" />
+											<Checkbox
+												color="primary"
+												id={String(row.id)}
+												checked={selectionModel.includes(row.id)}
+												onChange={handleChangeChecked}
+											/>
 										</TableCell>
 									)}
 									<TableCell align="left">{row.companyName}</TableCell>
