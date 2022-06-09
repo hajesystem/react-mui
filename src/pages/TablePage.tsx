@@ -8,6 +8,7 @@ import {
 	InputAdornment,
 	InputLabel,
 	MenuItem,
+	Pagination,
 	Paper,
 	Select,
 	SelectChangeEvent,
@@ -25,18 +26,32 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import { Search } from '@mui/icons-material';
-import { debounce, map, remove, values } from 'lodash';
 import { TableColumnType } from '../types';
 import tableDatas from './tabledata.json';
+import { debounce } from '../services';
 
 export default function TablePage() {
 	const [rows, setRows] = useState(tableDatas);
+	const [page, setPage] = useState<number>(1);
 	const [pageSize, setPageSize] = useState<number>(10);
+	const [showRows, setShowRows] = useState(rows.slice(0, pageSize));
 	const [tableCheckbox, setTableCheckbox] = useState(true);
 	const [selectionModel, setSelectionModel] = useState<number[]>([]);
-	const [allChecked, setAllChecked] = useState(false);
+	const [checkedAll, setCheckedAll] = useState(false);
 
 	const mobileSize = useMediaQuery('(min-width:440px)');
+
+	useEffect(() => {
+		const start = page * pageSize - pageSize;
+		const end = page * pageSize;
+		setShowRows(rows.slice(start, end));
+	}, [page, rows]);
+
+	useEffect(() => {
+		setCheckedAll(false);
+		setSelectionModel([]);
+		setShowRows(rows.slice(0, pageSize));
+	}, [pageSize]);
 
 	useEffect(
 		() => console.log('selectionModel>>>', selectionModel),
@@ -82,49 +97,40 @@ export default function TablePage() {
 	];
 
 	const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		debouncedSearch(e.target.value);
+		searchRecord(e.target.value, setRows);
 	};
 
 	const handleChangePageSize = (e: SelectChangeEvent) => {
 		setPageSize(Number(e.target.value as string));
 	};
 
-	const debouncedSearch = useMemo(
+	// 검색 코드
+	const searchRecord = useMemo(
 		() =>
-			debounce((value) => {
-				const searchData = map(tableDatas, (record) => {
-					const { ...textSource } = record;
-					const matchText = values(textSource).join('^').match(value);
-					if (!matchText) {
-						return null;
-					}
-					return record;
-				});
-
-				const fieldDatas = searchData.filter(
-					(row) => row !== null && row !== undefined
+			debounce((text, setArray) => {
+				const searchText = new RegExp(text, 'gi');
+				const searchArray = tableDatas.filter((record) =>
+					Object.values(record).join('^').match(searchText)
 				);
-				setRows(fieldDatas as any);
-			}, 200),
+				setPage(1);
+				setArray(searchArray);
+			}, 300),
 		[]
 	);
 
 	// 체크박스
 	const handleChangeAllChecked = () => {
-		setAllChecked(!allChecked);
+		setCheckedAll(!checkedAll);
 	};
 	useEffect(() => {
-		if (allChecked) {
-			const all: number[] = [];
-			for (let i = 0; i < rows.length; i += 1) {
-				all.push(rows[i].id);
-				setSelectionModel(all);
-			}
+		if (checkedAll) {
+			const checkedIds = showRows.map((record) => record.id);
+			setSelectionModel(checkedIds);
 		}
-		if (!allChecked) {
+		if (!checkedAll) {
 			setSelectionModel([]);
 		}
-	}, [allChecked]);
+	}, [checkedAll]);
 
 	const handleChangeChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { checked, id } = e.target;
@@ -133,12 +139,22 @@ export default function TablePage() {
 			setSelectionModel([...selectionModel, rowID]);
 		}
 		if (!checked) {
-			const newArray = remove(selectionModel, (n) => n !== rowID);
+			const newArray = selectionModel.filter((item) => item !== rowID);
 			setSelectionModel(newArray);
 		}
 	};
 
-	useEffect(() => console.log(allChecked), [allChecked]);
+	// 페이지네이션
+	const handleChangePagination = (
+		_event: React.ChangeEvent<unknown>,
+		value: number
+	) => {
+		setCheckedAll(false);
+		setSelectionModel([]);
+		setPage(value);
+	};
+
+	useEffect(() => console.log(checkedAll), [checkedAll]);
 	useEffect(() => console.log('rows>>', rows), [rows]);
 
 	const screenButtons = (
@@ -214,9 +230,9 @@ export default function TablePage() {
 									<TableCell padding="checkbox">
 										<Checkbox
 											color="primary"
-											checked={allChecked}
+											checked={checkedAll}
 											indeterminate={
-												allChecked && rows.length !== selectionModel.length
+												checkedAll && showRows.length !== selectionModel.length
 											}
 											onChange={handleChangeAllChecked}
 										/>
@@ -237,33 +253,55 @@ export default function TablePage() {
 							</TableRow>
 						</TableHead>
 						<TableBody>
-							{rows.map((row) => (
+							{showRows.map((record) => (
 								<TableRow
-									key={row.id}
+									key={record.id}
 									sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
 								>
 									{tableCheckbox && (
 										<TableCell padding="checkbox">
 											<Checkbox
 												color="primary"
-												id={String(row.id)}
-												checked={selectionModel.includes(row.id)}
+												id={String(record.id)}
+												checked={selectionModel.includes(record.id)}
 												onChange={handleChangeChecked}
 											/>
 										</TableCell>
 									)}
-									<TableCell align="left">{row.companyName}</TableCell>
-									<TableCell align="left">{row.businessNumber}</TableCell>
-									<TableCell align="left">{row.representative}</TableCell>
-									<TableCell align="left">{row.address}</TableCell>
-									<TableCell align="left">{row.businessType}</TableCell>
-									<TableCell align="left">{row.businessItem}</TableCell>
-									<TableCell align="left">{row.phone}</TableCell>
+									<TableCell align="left">{record.companyName}</TableCell>
+									<TableCell align="left">{record.businessNumber}</TableCell>
+									<TableCell align="left">{record.representative}</TableCell>
+									<TableCell
+										align="left"
+										onClick={() => console.log(record.address)}
+										sx={{
+											'&:hover': {
+												cursor: 'pointer',
+											},
+											maxWidth: '150px',
+											overflow: 'hidden',
+											whiteSpace: 'nowrap',
+											textOverflow: 'ellipsis',
+										}}
+									>
+										{record.address}
+									</TableCell>
+									<TableCell align="left">{record.businessType}</TableCell>
+									<TableCell align="left">{record.businessItem}</TableCell>
+									<TableCell align="left">{record.phone}</TableCell>
 								</TableRow>
 							))}
 						</TableBody>
 					</Table>
 				</TableContainer>
+				<Stack spacing={2} alignItems="end">
+					<Pagination
+						page={page}
+						count={Math.ceil(rows.length / pageSize)}
+						color="primary"
+						onChange={handleChangePagination}
+					/>
+				</Stack>
 			</Stack>
 		</Paper>
 	);
