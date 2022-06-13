@@ -27,6 +27,8 @@ module.exports = {
 		'no-use-before-define': 0,
 		'@typescript-eslint/no-use-before-define': 0,
 		'react-hooks/exhaustive-deps': 'warn',
+		'dot-notation': 0,
+		'@typescript-eslint/dot-notation': 0,
 	},
 	ignorePatterns: ['.eslintrc.js'],
 };

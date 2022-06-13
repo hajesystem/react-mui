@@ -10,7 +10,7 @@ import {
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import AddBoxIcon from '@mui/icons-material/AddBox';
-import tableDatas from './businessRegistration.json';
+import tableDatas from './usersList.json';
 import {
 	DataTable,
 	DataSearchInput,
@@ -18,7 +18,7 @@ import {
 } from '../components/tables';
 import { TableColumnType } from '../types';
 
-export default function TablePage() {
+export default function UsersPage() {
 	const mobileSize = useMediaQuery('(max-width:440px)');
 	const [pageSize, setPageSize] = useState<number>(10);
 	const [search, setSearch] = useState('');
@@ -37,22 +37,23 @@ export default function TablePage() {
 	//  array[string] type은 타입스크립트에서 사용할 수 없다.
 	// interface Column extends TableColumnType {
 	// 	id:
-	// 		| 'companyName'
-	// 		| 'businessNumber'
-	// 		| 'representative'
+	// 		| 'user'
+	// 		| 'password'
+	// 		| 'name'
+	// 		| 'phone'
+	// 		| 'email'
 	// 		| 'address'
-	// 		| 'businessType'
-	// 		| 'businessItem'
-	// 		| 'phone';
+	// 		| 'addressDetail'
+	// 		| 'department'
+	// 		| 'position'
+	// 		| 'date';
 	// }
 
-	// const columns: TableColumnType[] = [
 	const columns: TableColumnType[] = [
 		{
-			id: 'companyName',
-			field: 'companyName',
-			headerName: '상호',
-			headerAlign: 'center',
+			id: 'user',
+			field: 'user',
+			headerName: '아이디',
 			cellSx: {
 				maxWidth: '100px',
 				overflow: 'hidden',
@@ -61,57 +62,49 @@ export default function TablePage() {
 			},
 		},
 		{
-			id: 'businessNumber',
-			field: 'businessNumber',
+			id: 'password',
+			field: 'password',
 			hide: mobileSize,
-			headerName: '사업자등록번호',
-			valueFormatter: (params) =>
-				params.replace(/(\d{3})(\d{2})(\d{5})/, '$1-$2-$3'),
+			headerName: '패스워드',
 		},
 		{
-			id: 'representative',
-			field: 'representative',
+			id: 'name',
+			field: 'name',
 			hide: mobileSize,
-			headerName: '대표',
-			headerAlign: 'center',
+			headerName: '이름',
+		},
+		{
+			id: 'phone',
+			field: 'phone',
+			headerName: '전화번호',
+			valueFormatter: (params) =>
+				params.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3'),
+		},
+		{
+			id: 'email',
+			field: 'email',
+			hide: mobileSize,
+			headerName: '이메일',
 		},
 		{
 			id: 'address',
 			field: 'address',
 			headerName: '주소',
-			cellOnClick: (e) => console.log(e.currentTarget.innerText),
-			cellSx: {
-				'&:hover': {
-					cursor: 'pointer',
-				},
-				maxWidth: '250px',
-				overflow: 'hidden',
-				whiteSpace: 'nowrap',
-				textOverflow: 'ellipsis',
-			},
 		},
 		{
-			id: 'businessType',
-			field: 'businessType',
-			hide: mobileSize,
-			headerName: '업태',
-			headerAlign: 'center',
+			id: 'department',
+			field: 'department',
+			headerName: '부서',
 		},
 		{
-			id: 'businessItem',
-			field: 'businessItem',
-			hide: mobileSize,
-			headerName: '종목',
-			headerAlign: 'center',
+			id: 'position',
+			field: 'position',
+			headerName: '직책',
 		},
 		{
-			id: 'phone',
-			field: 'phone',
-			headerName: '연락처',
-			headerAlign: 'center',
-			cellSx: {
-				minWidth: '100px',
-			},
+			id: 'date',
+			field: 'date',
+			headerName: '입사일',
 		},
 	];
 
@@ -152,7 +145,7 @@ export default function TablePage() {
 			<Stack direction="row" spacing={2} sx={{ mb: 2 }}>
 				{!mobileSize ? screenButtons : mobileButtons}
 				<RowsSelectInput
-					pageSize={10}
+					pageSize={pageSize}
 					onChange={handleChangePageSize}
 					rowsPerPageOptions={[10, 15, 25, 50, 100]}
 				/>

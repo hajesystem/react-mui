@@ -3,7 +3,8 @@ import { Box, createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import { koKR } from '@mui/material/locale';
 import customColor from '../color/color';
 import { Aside, Contants, Header } from '../containers';
-import { TablePage } from '../pages';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { FormPage, TablePage, UsersPage } from '../pages';
 
 export default function AdminLayout() {
 	const drawerWidth = 240;
@@ -18,7 +19,7 @@ export default function AdminLayout() {
 				sx={{
 					display: 'flex',
 					height: '100vh',
-					backgroundColor: customColor.background,
+					backgroundColor: { sm: customColor.background },
 				}}
 			>
 				<CssBaseline />
@@ -31,6 +32,7 @@ export default function AdminLayout() {
 				<Contants drawerWidth={drawerWidth}>
 					{/* <FormPage /> */}
 					<TablePage />
+					{/* <UsersPage /> */}
 				</Contants>
 			</Box>
 		</ThemeProvider>

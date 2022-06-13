@@ -34,7 +34,7 @@ import {
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import AddBoxIcon from '@mui/icons-material/AddBox';
-import rows from './tabledata.json';
+import rows from './businessRegistration.json';
 
 export default function DataGridPage() {
 	const [pageSize, setPageSize] = useState<number>(10);
