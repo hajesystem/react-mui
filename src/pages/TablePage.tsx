@@ -17,12 +17,15 @@ import {
 	RowsSelectInput,
 } from '../components/tables';
 import { TableColumnType } from '../types';
+import FormModal from '../components/modals';
+import User from '../components/forms/User';
 
 export default function TablePage() {
 	const mobileSize = useMediaQuery('(max-width:440px)');
 	const [pageSize, setPageSize] = useState<number>(10);
 	const [search, setSearch] = useState('');
 	const [selectionItems, setSelectionItems] = useState<number[]>([]);
+	const [openModal, setOpenModal] = useState(false);
 
 	useEffect(() => console.log(selectionItems), [selectionItems]);
 
@@ -115,12 +118,20 @@ export default function TablePage() {
 		},
 	];
 
+	const open = () => {
+		setOpenModal(true);
+	};
+	const close = () => {
+		setOpenModal(false);
+	};
+
 	const screenButtons = (
 		<>
 			<Button
 				variant="outlined"
 				size="small"
-				disabled
+				disabled={false}
+				onClick={open}
 				startIcon={<AddBoxIcon />}
 			>
 				추가
@@ -135,7 +146,12 @@ export default function TablePage() {
 	);
 	const mobileButtons = (
 		<>
-			<IconButton disabled aria-label="추가" color="primary">
+			<IconButton
+				disabled={false}
+				aria-label="추가"
+				onClick={open}
+				color="primary"
+			>
 				<AddBoxIcon />
 			</IconButton>
 			<IconButton aria-label="수정" color="primary">
@@ -168,6 +184,9 @@ export default function TablePage() {
 				selectionItems={selectionItems}
 				setSelectionItems={setSelectionItems}
 			/>
+			<FormModal open={openModal} close={close} title="모달 타이틀">
+				<User close={close} />
+			</FormModal>
 		</Paper>
 	);
 }

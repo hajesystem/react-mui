@@ -29,6 +29,8 @@ import { Search } from '@mui/icons-material';
 import { TableColumnType } from '../types';
 import tableDatas from './businessRegistration.json';
 import { debounce } from '../services';
+import FormModal from '../components/modals';
+import FormPage from './FormPage';
 
 export default function TableFullPage() {
 	const [rows, setRows] = useState(tableDatas);

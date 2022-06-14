@@ -90,7 +90,7 @@ export default function DataTable({
 				setPage(1);
 				setArray(searchArray);
 			}, 300),
-		[]
+		[rowDatas]
 	);
 
 	useEffect(() => searchRecord(search, setRows), [search]);
