@@ -1,3 +1,4 @@
 import FormModal from './FormModal';
+import MapModal from './MapModal';
 
-export default FormModal;
+export { FormModal, MapModal };

@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
-interface FormModalType {
+interface FormModalProps {
 	open: boolean;
 	close: () => void;
 	title: string;
@@ -21,9 +21,9 @@ export default function FormModal({
 	title,
 	children,
 	close,
-}: FormModalType) {
+}: FormModalProps) {
 	return (
-		<Dialog open={open} maxWidth="sm" fullWidth>
+		<Dialog open={open} maxWidth="sm" fullWidth onClose={close}>
 			<DialogTitle>
 				<Stack>
 					<Typography variant="h6" component="div" style={{ flexGrow: 1 }}>

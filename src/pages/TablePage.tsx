@@ -17,7 +17,7 @@ import {
 	RowsSelectInput,
 } from '../components/tables';
 import { TableColumnType } from '../types';
-import FormModal from '../components/modals';
+import { FormModal, MapModal } from '../components/modals';
 import User from '../components/forms/User';
 
 export default function TablePage() {
@@ -26,6 +26,7 @@ export default function TablePage() {
 	const [search, setSearch] = useState('');
 	const [selectionItems, setSelectionItems] = useState<number[]>([]);
 	const [openModal, setOpenModal] = useState(false);
+	const [mapOpen, setMapOpen] = useState({ open: false, address: '' });
 
 	useEffect(() => console.log(selectionItems), [selectionItems]);
 
@@ -82,7 +83,11 @@ export default function TablePage() {
 			id: 'address',
 			field: 'address',
 			headerName: '주소',
-			cellOnClick: (e) => console.log(e.currentTarget.innerText),
+			cellOnClick: (e) => {
+				console.log(e);
+				const address = e.currentTarget.textContent as string;
+				setMapOpen({ ...mapOpen, open: true, address });
+			},
 			cellSx: {
 				'&:hover': {
 					cursor: 'pointer',
@@ -125,6 +130,10 @@ export default function TablePage() {
 		setOpenModal(false);
 	};
 
+	const mapClose = () => {
+		setMapOpen({ ...mapOpen, open: !mapOpen.open });
+	};
+
 	const screenButtons = (
 		<>
 			<Button
@@ -136,28 +145,33 @@ export default function TablePage() {
 			>
 				추가
 			</Button>
-			<Button variant="outlined" size="small" startIcon={<EditIcon />}>
+			<Button
+				variant="outlined"
+				disabled={selectionItems.length !== 1}
+				size="small"
+				startIcon={<EditIcon />}
+			>
 				수정
 			</Button>
-			<Button variant="outlined" size="small" startIcon={<DeleteIcon />}>
+			<Button
+				variant="outlined"
+				size="small"
+				disabled={selectionItems.length === 0}
+				startIcon={<DeleteIcon />}
+			>
 				삭제
 			</Button>
 		</>
 	);
 	const mobileButtons = (
 		<>
-			<IconButton
-				disabled={false}
-				aria-label="추가"
-				onClick={open}
-				color="primary"
-			>
+			<IconButton disabled={false} aria-label="추가" onClick={open}>
 				<AddBoxIcon />
 			</IconButton>
-			<IconButton aria-label="수정" color="primary">
+			<IconButton aria-label="수정" disabled={selectionItems.length !== 1}>
 				<EditIcon />
 			</IconButton>
-			<IconButton aria-label="삭제" color="primary">
+			<IconButton aria-label="삭제" disabled={selectionItems.length === 0}>
 				<DeleteIcon />
 			</IconButton>
 		</>
@@ -187,6 +201,11 @@ export default function TablePage() {
 			<FormModal open={openModal} close={close} title="모달 타이틀">
 				<User close={close} />
 			</FormModal>
+			<MapModal
+				open={mapOpen.open}
+				close={mapClose}
+				address={mapOpen.address}
+			/>
 		</Paper>
 	);
 }

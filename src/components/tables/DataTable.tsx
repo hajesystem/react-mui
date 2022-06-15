@@ -176,7 +176,7 @@ export default function DataTable({
 									(column) =>
 										!column.hide && (
 											<TableCell
-												key={column.id}
+												key={column.field}
 												onClick={column.cellOnClick}
 												sx={column.cellSx}
 												align={column.cellAlign}
